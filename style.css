@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'BurbankBigCondensed';
+    src: url('Fonts/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff2') format('woff2'),
+         url('Fonts/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+header nav {
+    margin-left: 1rem;
+    font-family: 'BurbankBigCondensed', sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+}
+header nav a {
+    text-decoration: none;
+}
+header nav a:hover {
+    text-decoration: underline;
+    color: #1cbf11;
+}
+.Bandeau {
+    background-color: rgba(191, 89, 17, 0.5);
+    display: flex;
+    align-items: center;
+}
+.ImgLogo {
+    width: 100px;
+    height: auto;
+}
