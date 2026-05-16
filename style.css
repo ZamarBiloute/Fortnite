@@ -66,7 +66,7 @@ header nav .submenu {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 14px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-    z-index: 1;
+    z-index: 2000;
     
 }
 header nav .menu > li:hover .submenu {
@@ -180,7 +180,7 @@ main {
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(20, 40, 80, 0.4);
     z-index: 1;
     object-fit: cover;
 }
