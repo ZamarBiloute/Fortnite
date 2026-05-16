@@ -188,6 +188,25 @@ main {
 .main-content {
     position: relative;
     z-index: 2;
-    padding: 2rem;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+}
+.MainContenu{
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgMainContenu {
+    gap: 10px;
+    width: 200px;
+
+}
+.MainTitle {
+    font-family: 'NotoSans-Regular', sans-serif;
+    font-size: 36px;
+    color: #1cbf11;
+
 }
