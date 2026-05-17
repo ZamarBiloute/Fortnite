@@ -108,3 +108,9 @@ main .Div_Section_Contenu {
   width: auto;
   object-fit: contain;
 }
+.slide video {
+  display: block;
+  height: 400px;
+  width: auto;
+  object-fit: contain;
+}
