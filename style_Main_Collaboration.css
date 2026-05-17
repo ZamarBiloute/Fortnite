@@ -1,0 +1,100 @@
+/* Déclaration des polices */
+@font-face {
+    font-family: 'BurbankBigCondensed';
+    src: url('Fonts/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff2') format('woff2'),
+         url('Fonts/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+/*----------------------------------*/
+/*          DEBUT <main>          */
+/*----------------------------------*/
+main {
+    background-color: #0072c9; /* Couleur de fond de secours */
+    position: relative;
+    min-height: 70vh;
+    overflow: hidden;
+}
+
+main .Section_Texte-Introduction {
+    font-family: 'NotoSans-Regular', sans-serif;
+    align-items: end;
+    justify-content: left;
+    background-color: white ; 
+    margin: 50px 50px 50px 50px;
+    padding: 20px;
+    border-radius: 10px;    
+}
+main .Nom-Entreprise {
+    font-family: 'NoroSans-Regular', sans-serif;
+    color: #000;
+    margin-bottom: 5x;
+}
+main .Date{
+    font-family: 'NoroSans-Regular', sans-serif;
+    color: #000;
+}
+ main .Texte_Entreprise{
+    font-family: 'NotoSans-Regular', sans-serif;
+    color: #000;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+main .Div_Section_Contenu {
+    font-family: 'NotoSans-Regular', sans-serif;
+    align-items: end;
+    justify-content: left;
+    background-color: rgb(255  , 255, 255,0.5);
+    margin: 20px 20px 20px 20px;
+    padding: 20px;
+    border-radius: 10px;    
+}
+
+/* ------- CAROUSEL -------*/
+.carousel {
+  height: 100vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.carousel button {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2.6rem;
+  z-index: 2;
+  cursor: pointer;
+  color: rgb(243, 241, 241);
+  transform: translateY(-50%);
+  top: 50%;
+}
+#prev {
+  left: 5px;
+}
+#next {
+  right: 0px;
+}
+.carousel li {
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+.slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
