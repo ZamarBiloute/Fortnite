@@ -1,19 +1,28 @@
-const buttons = document.querySelectorAll(".btn");
-const slides = document.querySelectorAll(".slide");
+const carousels = document.querySelectorAll(".carousel");
 
-// Tableau d'image : [0, 1, 2]
+carousels.forEach((carousel) => {
 
-buttons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    const calcNextSlide = e.target.id === "next" ? 1 : -1;
-    const slideActive = document.querySelector(".active");
+  const buttons = carousel.querySelectorAll(".btn");
+  const slides = carousel.querySelectorAll(".slide");
 
-    newIndex = calcNextSlide + [...slides].indexOf(slideActive);
+  buttons.forEach((button) => {
 
-    if (newIndex < 0) newIndex = [...slides].length - 1;
-    if (newIndex >= [...slides].length) newIndex = 0;
-    slides[newIndex].classList.add("active");
+    button.addEventListener("click", (e) => {
 
-    slideActive.classList.remove("active");
+      const calcNextSlide = button.id === "next" ? 1 : -1;
+
+      const slideActive = carousel.querySelector(".active");
+
+      let newIndex = calcNextSlide + [...slides].indexOf(slideActive);
+
+      if (newIndex < 0) newIndex = slides.length - 1;
+      if (newIndex >= slides.length) newIndex = 0;
+
+      slideActive.classList.remove("active");
+      slides[newIndex].classList.add("active");
+
+    });
+
   });
+
 });

@@ -6,6 +6,7 @@
     font-weight: bold;
 }
 
+
 /*----------------------------------*/
 /*          DEBUT <main>          */
 /*----------------------------------*/
@@ -53,24 +54,30 @@ main .Div_Section_Contenu {
 
 /* ------- CAROUSEL -------*/
 .carousel {
-  height: 100vh;
-  width: auto;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    width: auto;
+    height: 50vh;
+    
+    display: flex;
+    align-items: center;      /* centre verticalement */
+    justify-content: center;  /* centre horizontalement */
+
+    position: relative;
+    overflow: hidden;
 }
+
 .carousel button {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
   background: none;
   border: none;
-  outline: none;
   font-size: 2.6rem;
-  z-index: 2;
   cursor: pointer;
-  color: rgb(243, 241, 241);
-  transform: translateY(-50%);
-  top: 50%;
+  color: white;
+  z-index: 2;
 }
+
 #prev {
   left: 5px;
 }
@@ -84,17 +91,20 @@ main .Div_Section_Contenu {
 }
 .slide {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
   opacity: 0;
   transition: 0.4s ease-in-out;
 }
+
 .slide.active {
   opacity: 1;
 }
 .slide img {
   display: block;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  height: 400px;
+  width: auto;
+  object-fit: contain;
 }
