@@ -65,6 +65,18 @@ main .Div_Section_Contenu {
     overflow: hidden;
 }
 
+.BoutonSlide{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    background-color: red;
+    gap: 50px; /* espace entre les boutons */  
+    height: 50px;
+    margin-top: 20px;
+    font-size: xx-large;
+}
+
 .carousel button {
   position: absolute;
   top: 50%;
@@ -72,18 +84,15 @@ main .Div_Section_Contenu {
   
   background: none;
   border: none;
-  font-size: 2.6rem;
+  
   cursor: pointer;
   color: white;
   z-index: 2;
 }
+.BoutonSlide button {
+  font-size: xx-large;
+}
 
-#prev {
-  left: 5px;
-}
-#next {
-  right: 0px;
-}
 .carousel li {
   list-style: none;
   align-items: center;
