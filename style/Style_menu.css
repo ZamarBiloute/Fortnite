@@ -76,6 +76,7 @@ header a{
  display:none;
  padding: 0;
  margin: 0;
+ transform: translate(0px ,-10px);
 }
 .menu ul li:hover ul {
  display:grid;
