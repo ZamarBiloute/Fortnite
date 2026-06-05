@@ -1,166 +1,78 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Maquette pédagogique sur le jeu vidéo Fortnite, réalisée par Bouamar Bilel pour l'UTT en 2026.">
-        <link rel="stylesheet" href="style/style.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <title>Acceuil</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Acceuil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fortnite est un jeu vidéo de type battle royale développé par Epic Games et sorti en 2017. Il a rapidement gagné en popularité grâce à son gameplay dynamique, ses graphismes colorés et son modèle économique free-to-play. Fortnite propose plusieurs modes de jeu, dont le mode Battle Royale, où 100 joueurs s'affrontent pour être le dernier survivant sur une île. Le jeu est également connu pour ses mises à jour fréquentes, ses événements en direct et ses collaborations avec des franchises populaires, ce qui contribue à maintenir l'engagement de sa communauté de joueurs.">
+    <link rel="stylesheet" href="style/Style_menu.css">
+    <link rel="stylesheet" href="style/Style_content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
     <body>
         <header>
             <div class="bandeau">
                 <div class="logo">
                     <a href="index.html" class ="logo-link">
-                        <img src="image/logo.png" alt="Logo de Fortnite" class="logo">
+                        <img src="Image/logo.png" alt="Logo de Fortnite" class="logo">
                     </a>
                 </div>
-                <nav>
-                    <div class="nav-link">
-                        <a href="#Presentation">Présentation</a>
-                        <div class="subnav">
-                            <div class="subnav-content">
-                                <a href="page/hist.html">Histoire du jeu</a>
-                                <a href="page/hist_studio.html">Histoire du studio</a>
-                                <a href="page/gameplay.html">Gameplay</a>
-                            </div>
-                        </div>
-                        <a href="#Impact">Impact</a>
-                        <div class="subnav">
-                            <div class="subnav-content">   
-                                <a href="page/effet.html">Les effets</a>
-                                <a href="page/esport.html">Esport</a>
-                                <a href="page/collab.html">Collaborations</a>
-                            </div>
-                        </div>
-                        <a href="#Média">Média</a>
-                        <div class="subnav">
-                            <div class="subnav-content">
-                                <a href="page/photo.html">Photo</a>
-                                <a href="page/video.html">Video</a>
-                            </div>
-                        </div>
-                        <a href="#Quiz">Quiz</a>
-                        <a href="#Contact">Contact</a>
-                        <div class="subnav">
-                            <div class="subnav-content">
-                                <a href="page/formulaire.html">Formulaire</a>
-                                <a href="page/credit.html">Crédits</a>
-                            </div>
-                        </div>
-                    </div>
+                <nav class = "menu">
+                            <ul class = "topnav">
+                                <li class="barre"><a href="#Presentation" style="color: #1cbf11">Présentation</a>
+                                    <ul>
+                                        <li><a href="page/hist.html">Histoire du jeu</a></li>
+                                        <li><a href="page/hist_studio.html">Histoire du studio</a></li>
+                                        <li><a href="page/gameplay.html">Gameplay</a></li>
+                                    </ul>
+                                </li>
+                                <li class="barre"><a href="#Impact">Impacts</a>
+                                    <ul>
+                                        <li><a href="page/effet.html">Les effets</a></li>
+                                        <li><a href="page/esport.html">Esport</a></li>
+                                        <li><a href="page/collab.html">Collaborations</a></li>
+                                    </ul>
+                                </li>
+                                <li class="barre"><a href="#Média">Média</a>
+                                    <ul>
+                                        <li><a href="page/photo.html">Photos</a></li>
+                                        <li><a href="page/video.html">Vidéos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="barre"><a href="#Quiz">Quiz</a></li>
+                                <li class="barre"><a href="#Contact">Contact</a>
+                                    <ul>
+                                        <li><a href="page/formulaire.html">Formulaire</a></li>
+                                        <li><a href="page/credit.html">Crédits</a></li>
+                                    </ul>
+                                </li>
+                                <li class="icon">
+                                    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+                                </li>
+                            </ul>
                 </nav>
-                <!-- <div class="topnav" id="myTopnav"> -->
-                            <!-- <div class="subnav">
-                                <a class="subnavbutton">Présentation</a>
-                                <div class="subnav-content"> -->
-                                    <!-- <a href="page/hist.html">Histoire du jeu</a>
-                                    <a href="page/hist_studio.html">Histoire du studio</a>
-                                    <a href="page/gameplay.html">Gameplay</a> -->
-                                <!-- </div>
-                            </div>
-                            <div class="subnav">
-                                <button class="subnavbutton">Impact</button>
-                                <div class="subnav-content"> -->
-                                    <!-- <a href="page/effet.html">Les effets</a>
-                                    <a href="page/esport.html">Esport</a>
-                                    <a href="page/collab.html">Collaborations</a> -->
-                                <!-- </div>
-                            </div>
-                            <div class="subnav">
-                                <button class="subnavbutton">Média</button>
-                                <div class="subnav-content"> -->
-                                    <!-- <a href="page/photo.html">Photo</a>
-                                    <a href="page/video.html">Video</a> -->
-                                <!-- </div>
-                            </div>
-                            <div class="subnav">
-                                <button class="subnavbutton">Contact</button>
-                                <div class="subnav-content"> -->
-                                    <!-- <a href="page/formulaire.html">Formulaire</a>
-                                    <a href="page/credit.html">Crédits</a> -->
-                                <!-- </div> -->
-                            <!-- </div> -->
-                            <!-- <a href="page/quiz.html">Quiz</a>                          -->
-                <!-- </div> 
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a> -->
-                
             </div>
         </header>
-    <!--<h3><strong>Sommaire</strong></h3>
-    <h5>Acceuil</h5>
-    <ul>
-        <li><a href="index.html">Acceuil</a></li>
-    </ul>
-    <h5><strong>Présentation</strong></h5>
-    <ul>
-        <li><a href="page/hist.html">Histoire du jeu</a></li>
-        <li><a href="page/hist_studio.html">Histoire du studio</a></li>
-        <li><a href="page/gameplay.html">Gameplay</a></li>
-    </ul>
-    <h5>Les impacts?</h5>
-    <ul>
-        <li><a href="page/effet.html">Les effets</a></li>
-        <li><a href="page/esport.html">L'Esport</a></li>
-        <li><a href="page/collab.html">Les collaborations</a></li>
-    </ul>
-    <h5>Multimédia</h5>
-    <ul>
-        <li><a href="page/photo.html">Photo</a></li>
-        <li><a href="page/video.html">Video</a></li>
-    </ul>
-    <h5>Contact</h5>
-    <ul>
-        <li><a href="page/formulaire.html">Formulaire</a></li>
-        <li><a href="page/quiz.html">Quiz</a></li>
-    </ul> -->
-    <main>
-        <div class="background_video_container">
-            <video autoplay muted loop playsinline class="background-video">
-                <source src="video/Fortnite Chapter 2  Launch Trailer.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <div class="video-overlay"></div>
-        </div>
+        <main>
+            <div class="videobk">
+                <video src="video/Fortnite Chapter 2  Launch Trailer.mp4" autoplay muted loop>
+                </video>        
+            </div>
+            <section class="main-content">
+                <div class="content">
+                    <img src="Image/Backup/Logo_Fortnite_W1976_H551.jpg" alt="Image de Fortnite">
+                    <br>
+                    <p>Plongez dans l'univers du Battle Royale qui a bouleversé l'industrie du jeu vidéo. <br> Que vous soyez un vétéran des premières saisons ou un nouveau joueur atterrissant pour la première fois depuis le Bus de combat, ce site est fait pour vous. Explorez l'histoire fascinante de Fortnite, découvrez les secrets de son gameplay novateur, et comprenez comment ce simple jeu de tir est devenu un véritable phénomène culturel mondial.</p>
+                </div>
+            </section>
+        </main>
 
-<p>Bienvenue dans l'univers de fortnite. Dans ce site vous allez voir ce que fortnite vous a apporté mais aussi ce que fortnite a apporté aux industries autres que le jeux vidéo.
-    <br>
-    Dans ce site vous allez voir quelles sont les caractèristiques du jeu, en quoi ce jeu fut un succés colossale et surtout quelles sont ces influences dans d'autres oeuvres qui suivent.
-</p>
-
-<p>Nous verrons dans chacune des rubriques:
-    <ul>
-        <li>Qu'est ce que Fortnite?</li>
-        <li>Qui est Epic games?</li>
-        <li>Pourquoi est ce que ce jeu change des autres jeux du même type?</li>
-        <li>Les differentes influence dans son domaine</li>
-        <li>L'evolution du jeu et sa fructuration</li>
-    </ul>
-</p>
-
-<hr>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-
-<footer>
-    <p><strong>Bouamar Bilel - 2026</strong> <a href="bilel.bouamar@utt.fr"> bilel.bouamar@utt.fr</a></p>
-    <p>&copy;2026 - Maquette pédagogique (HTML sans CSS)</p>
-</footer>
+        <footer>
+                <p>2026 BOUAMAR Bilel - <a href="mailto:bilel.bouamar@utt.fr">bilel.bouamar@utt.fr</a> - Tous droits réservés</p>
+                <img src="Image/Backup/Logo_Fortnite_W1976_H551.jpg" alt="Logo de Fortnite" class="logo-footer">
+        </footer>
     </body>
 
 </html>

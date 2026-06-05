@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'BurbankBigCondensed';
+    src: url('../Font/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff2') format('woff2'),
+    url('../Font/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../Font/NotoSans/NotoSans-Regular.woff2') format('woff2'),
+    url('../Font/NotoSans/NotoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* vidéo en fond */
+.videobk{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    inset: 0;
+}
+
+.videobk video{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+} 
+.content{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(192, 90, 17, 0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 732px;
+    padding: 1rem 1rem;
+}
+.content p{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.3em;
+    text-align: justify;
+}
+.content img{
+    width: 300px;
+    height: auto;
+    display: block;
+    align-self: center;
+}
+.main-content{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    position: relative;
+    min-height: 70vh;
+    overflow: hidden;
+}
+
+/* .fortnite-image{
+    align-items: center;
+    width: 30%;
+    height: auto;
+    z-index: -2;
+    margin-top: 50px; 
+    margin-bottom: 30px; 
+} */

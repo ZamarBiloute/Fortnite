@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'BurbankBigCondensed';
+    src: url('../Font/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff2') format('woff2'),
+    url('../Font/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../Font/NotoSans/NotoSans-Regular.woff2') format('woff2'),
+    url('../Font/NotoSans/NotoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  font-family: 'BurbankBigCondensed', sans-serif;
+  font-size: 2.5em;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
+header a{
+  text-decoration: none;
+  color: black;
+}
+.bandeau{
+  background-color: rgba(192, 90, 17, 0.5);
+  display:flex;
+  align-items: center;
+}
+.logo img{
+  width: 90px;
+  height: auto;
+  /* margin-right: 100px; */
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+
+/* Menu de navigation */
+.menu{
+  margin-left: 13rem;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.menu li {
+    float: left;
+}
+.menu li a {
+  display: block;
+  color: black;
+  text-align: left;
+  padding: 0px 50px;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  /* background-color: rgba(192, 90, 17, 0.5);  */
+  color: #1cbf11;
+}
+
+.menu ul li ul {
+ display:none;
+ padding: 0;
+ margin: 0;
+}
+.menu ul li:hover ul {
+ display:grid;
+ border-radius: 8px;
+ padding: 1.2rem 1rem 1rem;
+ margin-top: 5px;
+ border: 3px solid rgba(255, 255, 255, 0.15);
+ }
+
+.menu li ul {
+ position:absolute ;
+ background-color: rgba(192, 90, 17, 0.5);
+ }
+
+.topnav{
+ font-family: 'BurbankBigCondensed', sans-serif;
+}
+
+.topnav .icon{
+  display: none;
+}
+
+/* pied de page pour les pages en général */
+footer{
+  background-color: rgba(192, 90, 17, 0.5);
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  justify-content: end;
+}
+ footer p{
+  font-family: 'Noto Sans', sans-serif; 
+  font-weight: bold;
+  text-align: center;
+  margin-right: 20px;
+}
+footer p a{
+  text-decoration: none;
+  
+}
+.logo-footer{
+  width: 115px;
+  height: auto;
+  margin-right: 10px;
+}
