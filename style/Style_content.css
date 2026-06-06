@@ -95,6 +95,7 @@ html{
 .main_page{
     background-color: #0072c9;
     padding-bottom: 50px;
+    font-family: 'Noto Sans', sans-serif;
 }
 .conteneur_page{
     background-color: rgb(204, 227, 244);
@@ -377,3 +378,35 @@ html{
     width: 420px;
 }
 
+/* effet */
+
+.contenue_effet{
+    display: flex;
+    flex-direction: column;   
+}
+.contenue_effet_texte{
+    display: flex;
+    flex-direction: column;
+}
+.contenue_effet_texte p{
+    margin-bottom: 20px;
+}
+.contenue_effet_texte h2{
+    padding-bottom: 20px;
+    text-align: justify;
+}
+.contenue_effet_image img{
+    width: 460px;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
+    margin-right: 20px ;
+}
+.contenue_effet_image{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    place-self: center;
+    
+}
+  
