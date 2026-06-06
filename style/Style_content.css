@@ -145,6 +145,7 @@ html{
     place-self: center;
     width: 100%;
     justify-content: space-between;
+    padding: 0px 25px;
 }
 .menu_filter button{
     padding: 10px 20px;
@@ -203,3 +204,37 @@ html{
     flex:1;
     
 } */
+
+/* CSS de la page hist_studio */
+.parallax {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.slide_debut{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Image/Hist_studio/f0.png);
+}
+
+.contenue{
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    background-color: rgb(233, 172, 136);
+    flex-direction: row;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.contenue p{
+    padding: 50px;
+    align-items: center;
+    font-size: 1.3rem;
+}
