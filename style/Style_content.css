@@ -85,12 +85,12 @@
     text-align: center;
     font-weight: bold;
 }
-.main_collab{
+.main_page{
     background-color: #0072c9;
 }
-.conteneur_collab{
-    background-color: white;
-    opacity: 0.8;
+.conteneur_page{
+    background-color: rgb(204, 227, 244);
+    /* opacity: 0.8; */
     border-radius: 40px;
     place-self: center;
     border: 1px solid black;
@@ -134,6 +134,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-direction: row;
+    place-self: center;
+    width: 100%;
+    justify-content: space-between;
 }
 .menu_filter button{
     padding: 10px 20px;
@@ -141,6 +145,49 @@
     font-size: 20px;
     border: none;
     box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    background-color: rgb(192, 90, 17);
+}
+.menu_filter button:active{
+    background-color: goldenrod;
+
+}
+.filtercard{
+    display: flex;
+    margin: 15px;
+}
+.card{
+    /* flex-basis: 330px; */
+    flex-direction: column;
+    display: flex;
+    background-color: white;
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;   
+}
+.card_text{
+    font-size: 15px;
+    color: black;
+
+}
+.card img{
+    max-width: 50%;
+    max-height: 50%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    place-self: center;
+}
+.card_title{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.card_body{
+    padding: 15px 20px 20px;
 }
 /* .expand-container:hover img{
     flex:1;
