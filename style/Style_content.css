@@ -88,7 +88,7 @@
 .main_collab{
     background-color: #0072c9;
 }
-.conteneur{
+.conteneur_collab{
     background-color: white;
     opacity: 0.8;
     border-radius: 40px;
@@ -100,17 +100,49 @@
     border-left-width: 50px;
     border-right-width: 50px;
     border-top-width: 50px;
-    border-bottom-width: 50px;
+    border-bottom-width: 0px;
 }
 .vide{
     height: 30px;
 }
 
-/* .fortnite-image{
+/* expand gallery */
+.expand-container{
+    display: flex;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.expand-container img{
+    flex: 1;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    width: 0;
+    filter: brightness(0.75);
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0px 10px;
+}
+
+.expand-container img:hover{
+    flex:6;
+    filter: brightness(1);
+}
+
+.menu_filter{
+    display: flex;
     align-items: center;
-    width: 30%;
-    height: auto;
-    z-index: -2;
-    margin-top: 50px; 
-    margin-bottom: 30px; 
+    gap: 10px;
+}
+.menu_filter button{
+    padding: 10px 20px;
+    font: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 0 10px black;
+}
+/* .expand-container:hover img{
+    flex:1;
+    
 } */
