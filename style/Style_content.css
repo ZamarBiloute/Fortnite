@@ -14,6 +14,11 @@
     font-style: normal;
 }
 
+/* smooth scroll for anchor links */
+html{
+    scroll-behavior: smooth;
+}
+
 /* vidéo en fond */
 .videobk{
     position: absolute;
@@ -158,7 +163,10 @@
 }
 .filtercard{
     display: flex;
+    align-items: flex-start;
     margin: 15px;
+    /* allow anchor targets inside .filtercard to sit below any fixed header */
+    scroll-margin-top: 150px;
 }
 .card{
     /* flex-basis: 330px; */

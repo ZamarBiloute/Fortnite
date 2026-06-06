@@ -59,15 +59,26 @@
             <div class="vide"></div>
             <div class="conteneur_page">
                 <div class="menu_filter">
-                    <button data-name="Armes">Armes</button>
-                    <button data-name="Constructions">Constructions</button>
-                    <button data-name="Mouvements">Mouvements</button>
-                    <button data-name="Evenements">Evènements</button>                    
+                    <a href="#Armes"> 
+                        <button data-name="Armes">Armes</button>
+                    </a>                    
+                    <a href="#Construction"> 
+                        <button data-name="Constructions" href="#Construction">Constructions</button>
+                    </a>                    
+
+                    <a href="#Mouvement"> 
+                        <button data-name="Mouvements" href="Mouvement">Mouvements</button>
+                    </a>    
+                    
+                    <a href="#Evenement"> 
+                        <button data-name="Evenements" href="#Evenement">Evènements</button>                    
+                    </a>
+                   
                 </div>
                 <br>
                 <br>
 
-                <div class="filtercard">
+                <div class="filtercard" id="Armes">
                     <div class="card" data-name="Scar">
                         <img src="../Image/gameplay/arme/0.png" alt="">
                         <div class="card_body">
@@ -76,7 +87,7 @@
                             <p class="card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fugit tempore inventore eum totam excepturi sint neque, possimus maiores vel ut iusto odit, aliquid exercitationem saepe dolorum iure, ipsum alias.</p>
                         </div>
                     </div>
-                    <div class="card" data-name="Scar">
+                    <div class="card" data-name="Scar" >
                         <img src="../Image/gameplay/arme/1.png" alt="">
                         <div class="card_body">
                             <h4 class="card_title">Boogie Bomb</h4>
@@ -93,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="filtercard">
+                <div class="filtercard" id="Construction">
                     <div class="card" data-name="Scar">
                         <img src="../Image/gameplay/Construction/0.png" alt="">
                         <div class="card_body">
@@ -116,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="filtercard">
+                <div class="filtercard" id="Mouvement">
                     <div class="card" data-name="Scar">
                         <img src="../Image/gameplay/Mouvement/0.png" alt="">
                         <div class="card_body">
@@ -139,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="filtercard">
+                <div class="filtercard" id="Evenement">
                     <div class="card" data-name="Scar">
                         <img src="../Image/gameplay/Evenement/0.png" alt="">
                         <div class="card_body">
