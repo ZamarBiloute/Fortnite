@@ -66,6 +66,8 @@
     min-height: 70vh;
     overflow: hidden;
 }
+
+/* texte introduction au page */
 .intro{
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.3em;
@@ -87,6 +89,7 @@
 }
 .main_page{
     background-color: #0072c9;
+    padding-bottom: 50px;
 }
 .conteneur_page{
     background-color: rgb(204, 227, 244);
@@ -100,7 +103,6 @@
     border-left-width: 50px;
     border-right-width: 50px;
     border-top-width: 50px;
-    border-bottom-width: 0px;
 }
 .vide{
     height: 30px;
@@ -121,7 +123,7 @@
     width: 0;
     filter: brightness(0.75);
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 0px 10px;
 }
 

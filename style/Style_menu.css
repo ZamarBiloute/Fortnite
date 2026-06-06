@@ -23,16 +23,17 @@
 header{
   font-family: 'BurbankBigCondensed', sans-serif;
   font-size: 2.5em;
-  position: relative;
+  position: sticky;
   width: 100%;
   z-index: 1000;
+  top: 0;
 }
 header a{
   text-decoration: none;
   color: black;
 }
 .bandeau{
-  background-color: rgba(192, 90, 17, 0.5);
+  background-color: rgb(223,172,136);
   display:flex;
   align-items: center;
 }
@@ -110,6 +111,7 @@ footer{
   align-items: center;
   padding: 20px;
   justify-content: end;
+
 }
  footer p{
   font-family: 'Noto Sans', sans-serif; 
