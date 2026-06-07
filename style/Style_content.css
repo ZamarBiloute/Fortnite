@@ -495,6 +495,10 @@ html{
     padding: 1rem;
     box-sizing: border-box;
 }
+.carousel h2{
+    justify-content: center;
+    display: flex;
+}
 .carousel-slides{
     position: relative;
     overflow: hidden;
@@ -505,15 +509,34 @@ html{
     justify-content: center;
     border-radius: 12px;
 }
+.carousel-slide{
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+.carousel-slide.active{
+    display: block;
+}
 .carousel-slides img{
     max-width: 100%;
     /* width: 1000px; */
     max-height: 100%;
-    display: none;
+    display: block;
     margin: 0 auto;
     object-fit: contain;
 }
-.carousel-slides img.active{
+.carousel-caption{
+    display: none;
+    margin: 0.8rem auto 0;
+    max-width: calc(100% - 24px);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.carousel-slide.active .carousel-caption{
     display: block;
 }
 .carousel-control{
