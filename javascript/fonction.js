@@ -14,18 +14,49 @@ document.addEventListener('DOMContentLoaded', function () {
 		const basePath = directory.endsWith('/') ? directory : directory + '/';
 		const captionsList = carousel.dataset.captions ? carousel.dataset.captions.split('|').map(s => s.trim()) : [];
 
-		function createSlide(filename, captionText) {
+		function isYoutubeEmbed(url) {
+			return typeof url === 'string' && /youtube\.com\/embed\//.test(url);
+		}
+
+		function isVideoFile(url) {
+			return typeof url === 'string' && /\.(mp4|webm|ogg|mov)(?:\?.*)?$/i.test(url.trim());
+		}
+
+		function getYoutubeThumb(url) {
+			const match = url.match(/embed\/([^?\/]+)/);
+			return match ? `https://img.youtube.com/vi/${match[1]}/mqdefault.jpg` : url;
+		}
+
+		function createSlide(source, captionText) {
 			const slide = document.createElement('div');
 			slide.className = 'carousel-slide';
 
-			const img = document.createElement('img');
-			img.src = filename.startsWith('http') || filename.startsWith('/') ? filename : basePath + filename;
-			img.alt = captionText || filename;
-			slide.appendChild(img);
+			if (isYoutubeEmbed(source)) {
+				const iframe = document.createElement('iframe');
+				iframe.dataset.src = source;
+				iframe.src = source;
+				iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+				iframe.allowFullscreen = true;
+				iframe.title = captionText || 'YouTube vidéo';
+				iframe.className = 'carousel-iframe';
+				slide.appendChild(iframe);
+			} else if (isVideoFile(source)) {
+				const video = document.createElement('video');
+				video.src = source.startsWith('http') || source.startsWith('/') ? source : basePath + source;
+				video.controls = true;
+				video.preload = 'metadata';
+				video.className = 'carousel-video';
+				slide.appendChild(video);
+			} else {
+				const img = document.createElement('img');
+				img.src = source.startsWith('http') || source.startsWith('/') ? source : basePath + source;
+				img.alt = captionText || source;
+				slide.appendChild(img);
+			}
 
 			const caption = document.createElement('div');
 			caption.className = 'carousel-caption';
-			caption.textContent = captionText || filename;
+			caption.textContent = captionText || source;
 			slide.appendChild(caption);
 
 			slidesContainer.appendChild(slide);
@@ -33,10 +64,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		function buildSlides() {
 			let slides = Array.from(slidesContainer.querySelectorAll('.carousel-slide'));
-			if (slides.length === 0 && carousel.dataset.images){
-				const list = carousel.dataset.images.split(',').map(s => s.trim()).filter(Boolean);
-				list.forEach((filename, index) => {
-					createSlide(filename, captionsList[index]);
+			if (slides.length === 0) {
+				const list = [];
+				if (carousel.dataset.images) {
+					list.push(...carousel.dataset.images.split(',').map(s => s.trim()).filter(Boolean));
+				}
+				if (carousel.dataset.videos) {
+					list.push(...carousel.dataset.videos.split(',').map(s => s.trim()).filter(Boolean));
+				}
+				list.forEach((source, index) => {
+					createSlide(source, captionsList[index]);
 				});
 				slides = Array.from(slidesContainer.querySelectorAll('.carousel-slide'));
 			}
@@ -49,8 +86,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		function show(index){
 			if (slides.length === 0) return;
-			slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-			const thumbs = Array.from(thumbsContainer.querySelectorAll('img'));
+			slides.forEach((slide, i) => {
+				const active = i === index;
+				slide.classList.toggle('active', active);
+				const iframe = slide.querySelector('iframe');
+				if (iframe) {
+					if (active) {
+						if (iframe.src !== iframe.dataset.src) {
+							iframe.src = iframe.dataset.src;
+						}
+					} else {
+						iframe.src = 'about:blank';
+					}
+				}
+				const video = slide.querySelector('video');
+				if (video) {
+					if (!active) {
+						try { video.pause(); video.currentTime = 0; } catch (e) { /* ignore */ }
+					}
+				}
+			});
+			const thumbs = Array.from(thumbsContainer.querySelectorAll('img, video'));
 			thumbs.forEach((t, i) => t.classList.toggle('active', i === index));
 			current = index;
 		}
@@ -62,27 +118,37 @@ document.addEventListener('DOMContentLoaded', function () {
 			thumbsContainer.innerHTML = '';
 			slides.forEach((slide, i) => {
 				const img = slide.querySelector('img');
-				if (!img) return;
-				const thumb = document.createElement('img');
-				thumb.src = img.src;
-				thumb.alt = img.alt || '';
-				thumb.addEventListener('click', () => { show(i); resetAutoplay(); });
-				thumbsContainer.appendChild(thumb);
+				const iframe = slide.querySelector('iframe');
+				const video = slide.querySelector('video');
+				let thumbElem = null;
+
+				if (img) {
+					thumbElem = document.createElement('img');
+					thumbElem.src = img.src;
+					thumbElem.alt = img.alt || '';
+				} else if (iframe) {
+					thumbElem = document.createElement('img');
+					thumbElem.src = getYoutubeThumb(iframe.src);
+					thumbElem.alt = slide.querySelector('.carousel-caption')?.textContent || '';
+				} else if (video) {
+					thumbElem = document.createElement('video');
+					thumbElem.src = video.src;
+					thumbElem.muted = true;
+					thumbElem.preload = 'metadata';
+					thumbElem.className = 'thumb-video';
+				}
+
+				if (!thumbElem) return;
+				thumbElem.addEventListener('click', () => { show(i); });
+				thumbsContainer.appendChild(thumbElem);
 			});
 		}
-
-		function startAutoplay(){
-			if (intervalId) clearInterval(intervalId);
-			intervalId = setInterval(next, 4000);
-		}
-		function resetAutoplay(){ startAutoplay(); }
 
 		if (slides.length > 0){
 			buildThumbs();
 			show(0);
-			prevBtn.addEventListener('click', () => { prev(); resetAutoplay(); });
-			nextBtn.addEventListener('click', () => { next(); resetAutoplay(); });
-			startAutoplay();
+			prevBtn.addEventListener('click', () => { prev(); });
+			nextBtn.addEventListener('click', () => { next(); });
 		}
 	});
 });

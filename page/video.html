@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../style/Style_menu.css">
+    <meta charset="UTF-8">
+    <title>Acceuil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Voici la page sur le quiz de Fortnite. Nous allons voir ici des questions sur le jeu et son studio pour tester vos connaissances sur le jeu et son univers.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Galerie Vidéo</title>
+    <meta name="description" content="Fortnite est un jeu vidéo de type battle royale développé par Epic Games et sorti en 2017. Il a rapidement gagné en popularité grâce à son gameplay dynamique, ses graphismes colorés et son modèle économique free-to-play. Fortnite propose plusieurs modes de jeu, dont le mode Battle Royale, où 100 joueurs s'affrontent pour être le dernier survivant sur une île. Le jeu est également connu pour ses mises à jour fréquentes, ses événements en direct et ses collaborations avec des franchises populaires, ce qui contribue à maintenir l'engagement de sa communauté de joueurs.">
+    <link rel="stylesheet" href="../style/Style_menu.css">
+    <link rel="stylesheet" href="../style/Style_content.css">
 </head>
-<body>
+
+    <body>
         <header>
             <div class="bandeau">
                 <div class="logo">
                     <a href="../index.html" class ="logo-link">
-                        <img src="../Image/logo.png" alt="Logo de Fortnite" class="logo">
+                        <img src="../Image/Logo/logo.png" alt="Logo de Fortnite" class="logo">
                     </a>
                 </div>
                 <nav class = "menu">
                             <ul class = "topnav">
-                                <li class="barre"><a href="#Presentation">Présentation</a>
+                                <li class="barre"><a href="#Presentation" >Présentation</a>
                                     <ul>
-                                        <li><a href="../page/hist.html">Histoire du jeu</a></li>
-                                        <li><a href="../page/hist_studio.html">Histoire du studio</a></li>
-                                        <li><a href="../page/gameplay.html">Gameplay</a></li>
+                                        <li><a href="hist.html">Histoire du jeu</a></li>
+                                        <li><a href="hist_studio.html">Histoire du studio</a></li>
+                                        <li><a href="gameplay.html">Gameplay</a></li>
                                     </ul>
                                 </li>
                                 <li class="barre"><a href="#Impact">Impacts</a>
                                     <ul>
-                                        <li><a href="../page/effet.html">Les effets</a></li>
-                                        <li><a href="../page/esport.html">Esport</a></li>
-                                        <li><a href="../page/collab.html">Collaborations</a></li>
+                                        <li><a href="effet.html">Les effets</a></li>
+                                        <li><a href="esport.html">Esport</a></li>
+                                        <li><a href="collab.html">Collaborations</a></li>
                                     </ul>
                                 </li>
-                                <li class="barre"><a href="#Média">Média</a>
+                                <li class="barre"><a href="#Média" style="color: #1cbf11">Média</a>
                                     <ul>
-                                        <li><a href="../page/photo.html">Photos</a></li>
-                                        <li><a href="../page/video.html">Vidéos</a></li>
+                                        <li><a href="photo.html">Photos</a></li>
+                                        <li><a href="video.html">Vidéos</a></li>
                                     </ul>
                                 </li>
                                 <li class="barre"><a href="#Quiz">Quiz</a></li>
                                 <li class="barre"><a href="#Contact">Contact</a>
                                     <ul>
-                                        <li><a href="../page/formulaire.html">Formulaire</a></li>
-                                        <li><a href="../page/credit.html">Crédits</a></li>
+                                        <li><a href="formulaire.html">Formulaire</a></li>
+                                        <li><a href="credit.html">Crédits</a></li>
                                     </ul>
                                 </li>
                                 <li class="icon">
@@ -52,26 +54,73 @@
                 </nav>
             </div>
         </header>
+        <main class="main_page">
+            <div class="vide"></div>
+            <section class="intro">
+                <h1>Galerie de vidéo</h1>
+                <p>
+                    Bienvenue dans cette galerie de vidéo dédiée à Fortnite.
+                </p>
+            </section>
+            <div class="vide"></div>
+            <div class="conteneur_page">
+                <div id="VideoCarousel" class="carousel" 
+                data-videos="https://www.youtube.com/embed/Uw1rhheBPB4?si=oqKlpXiJA4YVpYob, 
+                            https://www.youtube.com/embed/8DDyQ0CH_fY?si=6N7m70-bLZFY-aXE, 
+                            https://www.youtube.com/embed/cSVMw481sg4?si=cp0mcUNbM81pIe1y" 
+                data-captions="Vidéo Youtube - Collaboration|
+                                Vidéo Youtube - Finale World Cup Solo - 2019|
+                                Vidéo Youtube - Fortnite Chapter 7 Season 2">
+                    <h2>Vidéos Youtube</h2>
+                    <br>
+                    <button class="carousel-control prev" aria-label="Vidéo précédente">‹</button>
+                    <div class="carousel-slides"></div>
+                    <button class="carousel-control next" aria-label="Vidéo suivante">›</button>
+                    <div class="carousel-thumbs" aria-hidden="false"></div>
+                </div>
+                <hr class="fortnite-line">
 
-<h1>Galerie Vidéo</h1>
-<h3> Voici les vidéos des différentes catégories:</h3>
-<br>
-<h4>La comptétition Fortnite et son gameplay à haut niveau</h4>
-<figure>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/8DDyQ0CH_fY?si=6N7m70-bLZFY-aXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</figure>
-<h4>Les nombreuses collaborations </h4>
-<figure>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Uw1rhheBPB4?si=oqKlpXiJA4YVpYob" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</figure>
-<br>
+                <div id="LocalVideoCarousel" class="carousel" 
+                    data-directory="../video/Galerie" 
+                    data-videos="0.mp4, 1.mp4, 2.mp4" 
+                    data-captions="Vidéo locale 1|Vidéo locale 2|Vidéo locale 3">
+                    <h2>Vidéos locales</h2>
+                    <br>
+                    <button class="carousel-control prev" aria-label="Vidéo précédente">‹</button>
+                    <div class="carousel-slides"></div>
+                    <button class="carousel-control next" aria-label="Vidéo suivante">›</button>
+                    <div class="carousel-thumbs" aria-hidden="false"></div>
+                </div>
+                <hr class="fortnite-line">
 
-<h4> Le gameplay</h4>
-<figure>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cSVMw481sg4?si=cp0mcUNbM81pIe1y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</figure>
+                <!-- Liste de liens YouTube -->
+                <section id="YoutubeLinks" class="youtube-links-section">
+                    <h3>Vidéo(s) supplémentaires</h3>
+                    <ul class="youtube-links">
+                        <li><a href="https://www.youtube.com/watch?v=Uw1rhheBPB4" target="_blank" rel="noopener">Vidéo YouTube — Collaboration</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=8DDyQ0CH_fY" target="_blank" rel="noopener">Vidéo YouTube — Finale World Cup Solo</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=cSVMw481sg4" target="_blank" rel="noopener">Vidéo YouTube — Fortnite Chapter 7</a></li>
+                    </ul>
+                </section>
 
-<h4>Ect...</h4>
+                <button id="sideMenuToggle" class="side-chevron" aria-hidden="false" aria-expanded="false" title="Menu" aria-label="Ouvrir le menu">
+                    &lt;
+                </button>
+                <nav id="sideMenu" class="side-menu" aria-hidden="true">
+                    <ul>
+                        <li><a href="#VideoCarousel">Vidéos YouTube</a></li>
+                        <li><a href="#LocalVideoCarousel">Vidéos locales</a></li>
+                        <li><a href="#YoutubeLinks">Liens YouTube</a></li>
+                    </ul>
+                </nav>
 
-</body>
+            </div>
+        </main>
+        <footer>
+                <p>2026 BOUAMAR Bilel - <a href="mailto:bilel.bouamar@utt.fr">bilel.bouamar@utt.fr</a> - Tous droits réservés</p>
+                <img src="../Image/Logo/Fortnite_piedpage.jpg" alt="Logo de Fortnite" class="logo-footer">
+        </footer>
+        <script src="../javascript/fonction.js"></script>
+    </body>
+
 </html>
