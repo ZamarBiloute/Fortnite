@@ -86,3 +86,30 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 });
+
+// Side-menu toggle: keep separate to avoid interfering with carousel logic
+document.addEventListener('DOMContentLoaded', function () {
+	const toggle = document.getElementById('sideMenuToggle');
+	const menu = document.getElementById('sideMenu');
+	if (!toggle || !menu) return;
+
+	toggle.addEventListener('click', function () {
+		const open = menu.classList.toggle('open');
+		toggle.classList.toggle('rotated', open);
+		menu.setAttribute('aria-hidden', (!open).toString());
+		toggle.setAttribute('aria-expanded', open.toString());
+	});
+
+	menu.addEventListener('click', function (e) {
+		const target = e.target;
+		if (target && target.tagName && target.tagName.toLowerCase() === 'a') {
+			// allow anchor default behavior then hide menu
+			setTimeout(function () {
+				menu.classList.remove('open');
+				toggle.classList.remove('rotated');
+				menu.setAttribute('aria-hidden', 'true');
+				toggle.setAttribute('aria-expanded', 'false');
+			}, 50);
+		}
+	});
+});

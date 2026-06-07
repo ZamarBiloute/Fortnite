@@ -581,6 +581,50 @@ html{
     border-color: #00d4ff;
 }
 
+/* Floating chevron and side menu */
+.side-chevron{
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, background 0.15s ease;
+    border: none;
+}
+.side-chevron svg{ display: block; width: 18px; height: 18px; }
+.side-chevron:focus{ outline: 2px solid #00d4ff; outline-offset: 2px; }
+.side-chevron.rotated{ transform: translateY(-50%) rotate(180deg); }
+
+.side-menu{
+    position: fixed;
+    right: 64px;
+    top: 50%;
+    transform: translateY(-50%) translateX(110%);
+    background: rgba(255,255,255,0.98);
+    border-radius: 8px;
+    padding: 0.6rem 0.8rem;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+    z-index: 1500;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.side-menu.open{ transform: translateY(-50%) translateX(0%); opacity: 1; pointer-events: auto; }
+.side-menu ul{ list-style: none; margin: 0; padding: 0; }
+.side-menu li{ margin: 6px 0; }
+.side-menu a{ color: #003d66; text-decoration: none; font-weight: 600; }
+.side-menu a:hover{ text-decoration: underline; }
+
 @media (max-width: 700px){
     .carousel-slides{ height: 320px; }
     .carousel-thumbs img{ width: 64px; height: 44px; }
