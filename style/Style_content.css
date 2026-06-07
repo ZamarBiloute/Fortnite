@@ -613,6 +613,7 @@ html{
     background: rgba(255,255,255,0.98);
     border-radius: 8px;
     padding: 0.6rem 0.8rem;
+    min-width: 370px;
     box-shadow: 0 6px 24px rgba(0,0,0,0.25);
     z-index: 1500;
     transition: transform 0.25s ease, opacity 0.25s ease;
@@ -620,10 +621,10 @@ html{
     pointer-events: none;
 }
 .side-menu.open{ transform: translateY(-50%) translateX(0%); opacity: 1; pointer-events: auto; }
-.side-menu ul{ list-style: none; margin: 0; padding: 0; }
+.side-menu ul{ list-style: none; margin: 0; padding: 0; text-align: right; }
 .side-menu li{ margin: 6px 0; }
-.side-menu a{ color: #003d66; text-decoration: none; font-weight: 600; }
-.side-menu a:hover{ text-decoration: underline; }
+.side-menu a{ color: #003d66; text-decoration: none; font-weight: 600; display: inline-block; transition: transform 0.15s ease, color 0.15s ease; text-align: right; font-size: 2rem; }
+.side-menu a:hover{ text-decoration: underline; transform: translateX(-30px); color: #1cbf11; }
 
 @media (max-width: 700px){
     .carousel-slides{ height: 320px; }
