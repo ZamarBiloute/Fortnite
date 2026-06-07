@@ -150,7 +150,7 @@ html{
 }
 .menu_filter button{
     padding: 10px 20px;
-    font: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 20px;
     border: none;
     box-shadow: 0 0 10px black;
@@ -494,6 +494,7 @@ html{
     margin: 2rem auto;
     padding: 1rem;
     box-sizing: border-box;
+    scroll-margin-top: 150px;
 }
 .carousel h2{
     justify-content: center;
