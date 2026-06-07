@@ -429,3 +429,61 @@ html{
     text-align: center;
     box-sizing: border-box;
 }
+
+/* esport */
+.contenue_effet_esport_evenement,
+.contenue_effet_esport_joueur {
+    display: flex;
+    flex-direction: column;     
+}
+
+.contenue_effet_esport_evenement h1,
+.contenue_effet_esport_joueur h1{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 1rem;
+}
+.contenue_effet_esport_evenement h2{
+    justify-content: flex-start;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.contenue_effet_esport_evenement .evenement{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.contenue_effet_esport_joueur .joueur{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.contenue_effet_esport_evenement .evenement img{
+    width: 400px;
+}
+.contenue_effet_esport_joueur figure{
+    width: 420px;
+}
+.contenue_effet_esport_joueur .joueur img{
+    width: 400px;
+}
+.contenue_effet_esport_joueur figure{
+    width: 420px;
+}
+.contenue_effet_esport_joueur .Texte{
+    margin-left: 1rem;
+}
+
+.fortnite-neon {
+    border: none;
+    height: 4px;
+    background: #00d4ff;
+    box-shadow:
+        0 0 5px #00d4ff,
+        0 0 10px #00d4ff,
+        0 0 20px #00d4ff;
+    border-radius: 50px;
+    margin: 30px 0;
+}
+
