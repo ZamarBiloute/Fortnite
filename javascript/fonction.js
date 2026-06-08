@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		const nextBtn = carousel.querySelector('.carousel-control.next');
 		if (!slidesContainer || !thumbsContainer || !prevBtn || !nextBtn) return;
 
-		const directory = carousel.dataset.directory ? carousel.dataset.directory.trim() : '../Image/Galerie/Photo';
+		const directory = carousel.dataset.directory ? carousel.dataset.directory.trim() : '../image/Galerie/Photo';
 		const basePath = directory.endsWith('/') ? directory : directory + '/';
 		const captionsList = carousel.dataset.captions ? carousel.dataset.captions.split('|').map(s => s.trim()) : [];
 
