@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'BurbankBigCondensed';
-    src: url('../Font/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff2') format('woff2'),
-    url('../Font/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* Définition de la police du site pour les contenues */
 @font-face {
     font-family: 'Noto Sans';
     src: url('../Font/NotoSans/NotoSans-Regular.woff2') format('woff2'),
@@ -13,6 +6,27 @@
     font-weight: normal;
     font-style: normal;
 }
+/* Définition des variables globales */
+:root {
+  /* Polices */
+  --font: 'Noto Sans', sans-serif;
+
+  /* Couleur de fond main_page */
+  --color_background_main_page : #0072c9;
+  /* Couleur de fond conteneur */
+  --color_background_conteneur : rgb(204, 227, 244);
+  /* Couleur de fond du cadre */
+  --color_background_cadre : rgba(192, 90, 17, 0.5);
+  /* Couleur bouton inatif*/
+  --color_button_actif : rgb(192, 90, 17);
+  /* Couleur bouton actif */
+  --color_button_inactif : goldenrod;
+  --color_bordure : goldenrod;
+  /* Couleur de fond parallaxe */
+  --color_background_parallaxe : rgb(233, 172, 136);
+
+}
+
 
 /* smooth scroll for anchor links */
 html{
@@ -39,7 +53,7 @@ html{
     text-align: center;
     justify-content: center;
     color: white;
-    background-color: rgba(192, 90, 17, 0.5);
+    background-color: var(--color_background_cadre);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -47,7 +61,7 @@ html{
     padding: 1rem 1rem;
 }
 .content p{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(----font);
     font-size: 1.3em;
     text-align: justify;
 }
@@ -74,7 +88,7 @@ html{
 
 /* texte introduction au page */
 .intro{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(----font);
     font-size: 1.3em;
     text-align: justify;
     width: 70%;
@@ -93,12 +107,12 @@ html{
     font-weight: bold;
 }
 .main_page{
-    background-color: #0072c9;
+    background-color: var(--color_background_main_page);
     padding-bottom: 50px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(----font);
 }
 .conteneur_page{
-    background-color: rgb(204, 227, 244);
+    background-color: var(--color_background_conteneur);
     /* opacity: 0.8; */
     border-radius: 40px;
     /* place-self: center; */
@@ -150,17 +164,17 @@ html{
 }
 .menu_filter button{
     padding: 10px 20px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(----font);
     font-size: 20px;
     border: none;
     box-shadow: 0 0 10px black;
     border-radius: 10px;
     cursor: pointer;
     width: 200px;
-    background-color: rgb(192, 90, 17);
+    background-color: var(--color_button_actif);
 }
 .menu_filter button:active{
-    background-color: goldenrod;
+    background-color: var(----color_button_inactif);
 
 }
 .filtercard{
@@ -201,10 +215,7 @@ html{
 .card_body{
     padding: 15px 20px 20px;
 }
-/* .expand-container:hover img{
-    flex:1;
-    
-} */
+
 
 /* CSS de la page hist_studio */
 .parallax {
@@ -226,9 +237,9 @@ html{
 }
 
 .contenue{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(----font);
     display: flex;
-    background-color: rgb(233, 172, 136);
+    background-color: var(--color_background_parallaxe);
     flex-direction: row;
     padding: 50px;
     align-items: center;
@@ -239,8 +250,10 @@ html{
     align-items: center;
     font-size: 1.3rem;
 }
- /* Timeline */
- /* The actual timeline (the vertical ruler) */
+/* ---------------------*/
+/* Gestion du Timeline */
+ 
+ /* Regle associé à la verticalité */
 .timeline {
     width: 1000px;
     position: relative;
@@ -248,7 +261,6 @@ html{
     margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -260,7 +272,6 @@ html{
   margin-left: -3px;
 }
 
-/* Container around content */
 .container_timeline {
   padding: 10px 40px;
   position: relative;
@@ -268,7 +279,7 @@ html{
   width: 50%;
 }
 
-/* The circles on the timeline */
+/* Mise en forme des cercles de la timeline */
 .container_timeline::after {
   content: '';
   position: absolute;
@@ -282,12 +293,12 @@ html{
   z-index: 1;
 }
 
-/* Place the container to the left */
+/* Positionne les div 'left' */
 .left {
   left: 0;
 }
 
-/* Place the container to the right */
+/* Positionne les div 'right' */
 .right {
   left: 50%;
 }
@@ -333,11 +344,12 @@ html{
   border-radius: 6px;
 }
 
+/*----------------*/
 /* Flipcard */
+/*----------------*/
 
 .flip-card {
   background-color: transparent;
-  /* width: 300px; */
   height: 300px;
   perspective: 1000px;
 }
@@ -349,7 +361,6 @@ html{
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
 }
 
 .flip-card:hover .flip-card-inner {
@@ -365,13 +376,10 @@ html{
 }
 
 .flip-card-front {
-  /* background-color: #bbb; */
   color: black;
 }
 
 .flip-card-back {
-  /* background-color: #2980b9; */
-  /* color: white; */
   transform: rotateY(180deg);
 }
 .flip-card-back img{
@@ -475,19 +483,7 @@ html{
     margin-left: 1rem;
 }
 
-.fortnite-neon {
-    border: none;
-    height: 4px;
-    background: #00d4ff;
-    box-shadow:
-        0 0 5px #00d4ff,
-        0 0 10px #00d4ff,
-        0 0 20px #00d4ff;
-    border-radius: 50px;
-    margin: 30px 0;
-}
-
-/* Simple responsive carousel for photo gallery */
+/* carousel for photo gallery */
 .carousel{
     position: relative;
     max-width: 1000px;
@@ -503,8 +499,6 @@ html{
 .carousel-slides{
     position: relative;
     overflow: hidden;
-    /* width: 100%;
-    height: 560px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -612,11 +606,11 @@ html{
 }
 .carousel-thumbs img.active{
     opacity: 1;
-    border-color: #00d4ff;
+    border-color: var(--color_bordure);
 }
 .carousel-thumbs video.active{
     opacity: 1;
-    border-color: #00d4ff;
+    border-color: var(--color_bordure);
 }
 
 /* YouTube links list */
@@ -634,16 +628,13 @@ html{
     gap: 0.4rem;
 }
 .youtube-links a{
-    color: #003d66;
     text-decoration: none;
     font-weight: 600;
     padding: 0.6rem 0.8rem;
     border-radius: 6px;
-    background: rgba(0,0,0,0.03);
 }
 .youtube-links a:hover{
     text-decoration: underline;
-    background: rgba(0,0,0,0.06);
 }
 
 /* Floating chevron and side menu */
@@ -667,7 +658,7 @@ html{
     border: none;
 }
 .side-chevron svg{ display: block; width: 18px; height: 18px; }
-.side-chevron:focus{ outline: 2px solid #00d4ff; outline-offset: 2px; }
+.side-chevron:focus{ outline: 2px solid var(--color_bordure); outline-offset: 2px; }
 .side-chevron.rotated{ transform: translateY(-50%) rotate(180deg); }
 
 .side-menu{
