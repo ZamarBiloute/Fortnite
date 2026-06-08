@@ -1,3 +1,4 @@
+/* Définition des polices du site */
 @font-face {
     font-family: 'BurbankBigCondensed';
     src: url('../Font/BurbankBigCondensed-Bold/BurbankBigCondensed-Bold.woff2') format('woff2'),
@@ -13,6 +14,25 @@
     font-weight: normal;
     font-style: normal;
 }
+/* Définition des variables globales */
+:root {
+  /* Polices */
+  --font-header : 'BurbankBigCondensed', sans-serif;
+  --font-nave : 'BurbankBigCondensed', sans-serif;
+  --font-pied: 'Noto Sans', sans-serif;
+
+  /* Couleur de fond*/
+  --color_background : rgb(223,172,136);
+  /* Couleur de fond submenu et pied */
+  --color_background_submenu_pied : rgba(192, 90, 17, 0.5);
+
+  /* Couleur Texte */
+  --color_texte : black;
+  /* Couleur selection texte */
+  --color_select_texte : #1cbf11;
+  
+
+}
 
 *{
   padding: 0;
@@ -21,7 +41,7 @@
 }
 
 header{
-  font-family: 'BurbankBigCondensed', sans-serif;
+  font-family: var(--font-header);
   font-size: 2.5em;
   position: sticky;
   width: 100%;
@@ -30,10 +50,10 @@ header{
 }
 header a{
   text-decoration: none;
-  color: black;
+  color: var(--color_texte);
 }
 .bandeau{
-  background-color: rgb(223,172,136);
+  background-color: var(--color_background);
   display:flex;
   align-items: center;
 }
@@ -61,7 +81,7 @@ header a{
 }
 .menu li a {
   display: block;
-  color: black;
+  color: var(--color_texte);
   text-align: left;
   padding: 0px 50px;
   font-size: 3rem;
@@ -69,8 +89,7 @@ header a{
 }
 
 .menu li a:hover {
-  /* background-color: rgba(192, 90, 17, 0.5);  */
-  color: #1cbf11;
+  color: var(--color_select_texte);
 }
 
 .menu ul li ul {
@@ -89,11 +108,11 @@ header a{
 
 .menu li ul {
  position:absolute ;
- background-color: rgba(192, 90, 17, 0.5);
+ background-color: var(--color_background_submenu_pied);
  }
 
 .topnav{
- font-family: 'BurbankBigCondensed', sans-serif;
+ font-family: var(--font-nave);
 }
 
 .topnav .icon{
@@ -102,7 +121,7 @@ header a{
 
 /* pied de page pour les pages en général */
 footer{
-  background-color: rgba(192, 90, 17, 0.5);
+  background-color: var(--color_background_submenu_pied);
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -114,7 +133,7 @@ footer{
 
 }
  footer p{
-  font-family: 'Noto Sans', sans-serif; 
+  font-family: var(--font-pied); 
   font-weight: bold;
   text-align: center;
   margin-right: 20px;
