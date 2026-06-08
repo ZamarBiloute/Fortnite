@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../style/Style_menu.css">
     <link rel="stylesheet" href="../style/Style_content.css">
 </head>
-
     <body>
+        <!-- Début du header dans lequel se trouve le bandeau de menu -->
         <header>
             <div class="bandeau">
                 <div class="logo">
@@ -18,6 +18,7 @@
                         <img src="../image/Logo/logo.png" alt="Logo de Fortnite" class="logo">
                     </a>
                 </div>
+                <!-- Chaque texte du bandeau de menu sera en couleur afin de signaler à l'utilisateur la rubrique de la page en cours -->
                 <nav class = "menu">
                             <ul class = "topnav">
                                 <li class="barre"><a href="#Presentation" >Présentation</a>
@@ -54,8 +55,10 @@
                 </nav>
             </div>
         </header>
+        <!-- Toutes les pages ont une 'div' appelé  "main_page" afin d'appliquer le meme CSS pour obtenir une harmonie et cohérence hormis quelque exception défini dans le CDC (index.html par exemple)-->
         <main class="main_page">
             <div class="vide"></div>
+            <!-- Toutes les pages ont une 'div' appelé  "intro" afin d'appliquer le meme CSS pour obtenir une harmonie et cohérence hormis quelque exception défini dans le CDC (index.html par exemple)-->
             <section class="intro">
                 <h1>Galerie de vidéo</h1>
                 <p>
@@ -67,7 +70,13 @@
                 </p>
             </section>
             <div class="vide"></div>
+            <!-- Toutes les pages ont une div "conteneur_page" afin d'appliquer le meme CSS pour obtenir une harmonie et cohérence hormis quelque exception défini dans le CDC (index.html par exemple) -->
             <div class="conteneur_page">
+                <!-- Section spécifique pour la création d'un carrousel de vidéo youtube (à distance) -->
+                <!-- Cela necessite le fichier de script 'fonction.js' (Javascript) -->
+                <!-- Il faut définir dans les champs suivant : -->
+                <!--  - data-videos : liste des liens youtube espacés par ue virgule  -->
+                <!--  - data-captions : liste des légendes associés à chaque liens youtube défini précédement-->
                 <div id="VideoCarousel" class="carousel" 
                 data-videos="https://www.youtube.com/embed/Uw1rhheBPB4?si=oqKlpXiJA4YVpYob, 
                             https://www.youtube.com/embed/8DDyQ0CH_fY?si=6N7m70-bLZFY-aXE, 
@@ -84,6 +93,12 @@
                 </div>
                 <hr class="fortnite-line">
 
+                <!-- Section spécifique pour la création d'un carrousel de vidéo en local -->
+                <!-- Cela necessite le fichier de script 'fonction.js' (Javascript) -->
+                <!-- Il faut définir dans les champs suivant : -->
+                <!--  - data-directory : répertoire dans lequel se trouve les vidéos local -->
+                <!--  - data-videos : liste des fichiers vidéos espacés par ue virgule  -->
+                <!--  - data-captions : liste des légendes associés à chaque vidéos défini précédement-->
                 <div id="LocalVideoCarousel" class="carousel" 
                     data-directory="../video/Galerie" 
                     data-videos="0.mp4, 1.mp4, 2.mp4" 
@@ -107,6 +122,8 @@
                     </ul>
                 </section>
 
+                <!-- Création d'un menu caché, accessible en cliquant sur le symbole "chevron" -->
+                <!-- Ce menu permet d'accéder au ancrage de la page courante -->
                 <button id="sideMenuToggle" class="side-chevron" aria-hidden="false" aria-expanded="false" title="Menu" aria-label="Ouvrir le menu">
                     &lt;
                 </button>
@@ -120,6 +137,7 @@
 
             </div>
         </main>
+        <!-- Début du footer (pied de page) -->
         <footer>
                 <p>2026 BOUAMAR Bilel - <a href="mailto:bilel.bouamar@utt.fr">bilel.bouamar@utt.fr</a> - Tous droits réservés</p>
                 <img src="../image/Logo/Fortnite_piedpage.jpg" alt="Logo de Fortnite" class="logo-footer">
