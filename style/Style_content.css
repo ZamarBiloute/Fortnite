@@ -188,7 +188,8 @@ html{
     scroll-margin-top: 150px;
 }
 .card{
-    /* flex-basis: 330px; */
+    flex-basis: 330px;
+    flex:1;
     flex-direction: column;
     display: flex;
     background-color: white;
