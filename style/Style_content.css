@@ -55,7 +55,9 @@ html{
     text-align: center;
     justify-content: center;
     color: white;
-    background-color: var(--color_background_cadre);
+    /* background-color: var(--color_background_cadre); */
+    opacity: 0.8;
+    background: linear-gradient(90deg, #8360c3, #2ebf91);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -188,7 +190,8 @@ html{
     scroll-margin-top: 150px;
 }
 .card{
-    /* flex-basis: 330px; */
+    flex-basis: 330px;
+    flex:1;
     flex-direction: column;
     display: flex;
     background-color: white;
