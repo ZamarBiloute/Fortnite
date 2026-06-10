@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Quiz - Fortnite</title>
     <meta name="author" content="Bilel BOUAMAR">
-    <meta name="keywords" content="UTT, MM01, web">
+    <meta name="keywords" content="UTT, MM01, web">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tester vos connaissances avec un quiz amusant et interactif.">
+    <meta name="description" content="Testez vos connaissances sur Fortnite et Epic Games avec notre QCM interactif.">
     <link rel="icon" type="image/png" href="../image/icone/favicon.png">
     <link rel="stylesheet" href="../style/Style_Header_Et_Footer.css">
     <link rel="stylesheet" href="../style/Style_content.css">
-    </head>
+</head>
     <body>
-        <!-- Début du header dans lequel se trouve le bandeau de menu -->
         <header>
             <div class="bandeau">
                 <div class="logo">
                     <a href="../index.html" class ="logo-link">
-                        <img src="../image/logo.png" alt="Logo de Fortnite" class="logo">
+                        <img src="../image/Logo/logo.png" alt="Logo de Fortnite" class="logo">
                     </a>
                 </div>
-                <!-- Chaque texte du bandeau de menu sera en couleur afin de signaler à l'utilisateur la rubrique de la page en cours -->
                 <nav class = "menu">
                             <ul class = "topnav">
-                                <li class="barre"><a href="#Presentation">Présentation</a>
+                                <li class="barre"><a href="#Presentation" >Présentation</a>
                                     <ul>
-                                        <li><a href="../page/hist.html">Histoire du jeu</a></li>
-                                        <li><a href="../page/hist_studio.html">Histoire du studio</a></li>
-                                        <li><a href="../page/gameplay.html">Gameplay</a></li>
+                                        <li><a href="hist.html">Histoire du jeu</a></li>
+                                        <li><a href="hist_studio.html">Histoire du studio</a></li>
+                                        <li><a href="gameplay.html">Gameplay</a></li>
                                     </ul>
                                 </li>
                                 <li class="barre"><a href="#Impact">Impacts</a>
                                     <ul>
-                                        <li><a href="../page/effet.html">Les effets</a></li>
-                                        <li><a href="../page/esport.html">Esport</a></li>
-                                        <li><a href="../page/collab.html">Collaborations</a></li>
+                                        <li><a href="effet.html">Les effets</a></li>
+                                        <li><a href="esport.html">Esport</a></li>
+                                        <li><a href="collab.html">Collaborations</a></li>
                                     </ul>
                                 </li>
                                 <li class="barre"><a href="#Média">Média</a>
                                     <ul>
-                                        <li><a href="../page/photo.html">Photos</a></li>
-                                        <li><a href="../page/video.html">Vidéos</a></li>
+                                        <li><a href="photo.html">Photos</a></li>
+                                        <li><a href="video.html">Vidéos</a></li>
                                     </ul>
                                 </li>
-                                <li class="barre"><a href="#Quiz">Quiz</a></li>
+                                <li class="barre"><a href="quiz.html" style="color: #1cbf11">Quiz</a></li>
                                 <li class="barre"><a href="#Contact">Contact</a>
                                     <ul>
-                                        <li><a href="../page/formulaire.html">Formulaire</a></li>
-                                        <li><a href="../page/credit.html">Crédits</a></li>
+                                        <li><a href="formulaire.html">Formulaire</a></li>
+                                        <li><a href="credit.html">Crédits</a></li>
                                     </ul>
                                 </li>
                                 <li class="icon">
@@ -58,20 +57,96 @@
             </div>
         </header>
 
-<h2>Quiz</h2>
-<details>
-    <summary> Quel est la date de création du studio?</summary>
-    1991
-</details>
-<details>    
-    <summary>Quel est la date de création du jeu?</summary>
-    2007
-</details>
-<details> 
-    <summary>Quel est le jeu qui a fait connaitre le studio?</summary>
-    Unreal Tournament
-</details>
-<h4>Ect...</h4>
- </body>
+        <main class="main_page">
+            <div class="vide"></div>
+            
+            <div class="conteneur_page">
+                <form class="quiz-form">
+                    <h1 class="quiz-title">Quiz Fortnite & Epic Games</h1>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">1. En quelle année le studio Epic Games a-t-il été créé ?</p>
+                        <label class="quiz-option"><input type="radio" name="q1" class="wrong"> 1985</label>
+                        <label class="quiz-option"><input type="radio" name="q1" class="correct"> 1991</label>
+                        <label class="quiz-option"><input type="radio" name="q1" class="wrong"> 1998</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">2. Quel est le mode de jeu de Fortnite devenu un phénomène mondial en 2017 ?</p>
+                        <label class="quiz-option"><input type="radio" name="q2" class="wrong"> Sauver le monde</label>
+                        <label class="quiz-option"><input type="radio" name="q2" class="correct"> Battle Royale</label>
+                        <label class="quiz-option"><input type="radio" name="q2" class="wrong"> Mode Créatif</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">3. Quel moteur de jeu célèbre a été développé par Epic Games ?</p>
+                        <label class="quiz-option"><input type="radio" name="q3" class="correct"> Unreal Engine</label>
+                        <label class="quiz-option"><input type="radio" name="q3" class="wrong"> Unity</label>
+                        <label class="quiz-option"><input type="radio" name="q3" class="wrong"> Frostbite</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">4. Quel jeu de tir a fait connaître le studio à la fin des années 90 ?</p>
+                        <label class="quiz-option"><input type="radio" name="q4" class="wrong"> DOOM</label>
+                        <label class="quiz-option"><input type="radio" name="q4" class="wrong"> Quake</label>
+                        <label class="quiz-option"><input type="radio" name="q4" class="correct"> Unreal Tournament</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">5. Combien de joueurs s'affrontent au début d'une partie classique de Battle Royale ?</p>
+                        <label class="quiz-option"><input type="radio" name="q5" class="wrong"> 50 joueurs</label>
+                        <label class="quiz-option"><input type="radio" name="q5" class="correct"> 100 joueurs</label>
+                        <label class="quiz-option"><input type="radio" name="q5" class="wrong"> 150 joueurs</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">6. Quel est le nom de la monnaie virtuelle utilisée dans Fortnite ?</p>
+                        <label class="quiz-option"><input type="radio" name="q6" class="wrong"> Epic Coins</label>
+                        <label class="quiz-option"><input type="radio" name="q6" class="wrong"> Gold Credits</label>
+                        <label class="quiz-option"><input type="radio" name="q6" class="correct"> V-Bucks</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">7. À ses débuts en 2011, Fortnite était pensé comme un jeu de :</p>
+                        <label class="quiz-option"><input type="radio" name="q7" class="correct"> Survie en coopération</label>
+                        <label class="quiz-option"><input type="radio" name="q7" class="wrong"> Course automobile</label>
+                        <label class="quiz-option"><input type="radio" name="q7" class="wrong"> Combat en arène</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">8. Quel artiste a réuni des millions de joueurs lors d'un concert virtuel en 2020 ?</p>
+                        <label class="quiz-option"><input type="radio" name="q8" class="wrong"> Marshmello</label>
+                        <label class="quiz-option"><input type="radio" name="q8" class="correct"> Travis Scott</label>
+                        <label class="quiz-option"><input type="radio" name="q8" class="wrong"> Eminem</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">9. Comment s'appelle l'outil avancé de création de cartes sorti récemment ?</p>
+                        <label class="quiz-option"><input type="radio" name="q9" class="wrong"> Fortnite Maker</label>
+                        <label class="quiz-option"><input type="radio" name="q9" class="correct"> UEFN (Unreal Editor)</label>
+                        <label class="quiz-option"><input type="radio" name="q9" class="wrong"> Epic Studio</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question">10. Qui est le fondateur historique et actuel dirigeant d'Epic Games ?</p>
+                        <label class="quiz-option"><input type="radio" name="q10" class="wrong"> Gabe Newell</label>
+                        <label class="quiz-option"><input type="radio" name="q10" class="correct"> Tim Sweeney</label>
+                        <label class="quiz-option"><input type="radio" name="q10" class="wrong"> Cliff Bleszinski</label>
+                    </div>
+
+                    <div class="quiz-result-box">
+                        <h2>Votre Résultat</h2>
+                        <p class="score-display">Vous avez obtenu une note de : </p>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+                <p>2026 BOUAMAR Bilel - <a href="mailto:bilel.bouamar@utt.fr">bilel.bouamar@utt.fr</a> - Tous droits réservés</p>
+                <img src="../image/Logo/Fortnite_piedpage.jpg" alt="Logo de Fortnite" class="logo-footer">
+        </footer>
+        <script src="../javascript/fonction.js"></script>
+    </body>
 
 </html>
