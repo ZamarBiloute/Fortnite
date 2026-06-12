@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Accédez au formulaire de contact du projet afin d'envoyer un message aux intervenants de ce projet de site internet">
     <link rel="icon" type="image/png" href="../image/icone/favicon.png">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/Style_Header_Et_Footer.css">
+    <link rel="stylesheet" href="../style/Style_content.css">
     </head>
     <body>
         <!-- Début du header dans lequel se trouve le bandeau de menu -->
@@ -16,7 +17,7 @@
             <div class="bandeau">
                 <div class="logo">
                     <a href="../index.html" class ="logo-link">
-                        <img src="../image/logo.png" alt="Logo de Fortnite" class="logo">
+                        <img src="../image/Logo/logo.png" alt="Logo de Fortnite" class="logo">
                     </a>
                 </div>
                 <!-- Chaque texte du bandeau de menu sera en couleur afin de signaler à l'utilisateur la rubrique de la page en cours -->
@@ -56,28 +57,52 @@
                 </nav>
             </div>
         </header>
-<fieldset>
-    <legend>Si vous voulez contacter Martin Dracos pour en savoir plus</legend>
-    <label for="nom">Nom Complet</label>
-    <br>
-    <input type="text" size="30" maxlength="30" id="nom" name="nom" placeholder="Nom et Prénom" required>
-    <br><br>
+        <!-- Toutes les pages ont une 'div' appelé  "main_page" afin d'appliquer le meme CSS pour obtenir une harmonie et cohérence hormis quelque exception défini dans le CDC (index.html par exemple)-->
+        <main class="main_page">
+            <div class="vide"></div>
+            <section class="intro">
+                <h1>Contactez l'équipe du projet</h1>
+                <p>
+                    Vous avez des questions sur l'histoire de Fortnite, son impact sur l'esport, ou vous souhaitez simplement échanger sur ce projet web? Vous êtes au bon endroit. Remplissez le formulaire ci-dessous pour envoyer un message directement aux intervenants du projet.
+                </p>
+            </section>
+            <div class="vide"></div>
+            <!-- Toutes les pages ont une div "conteneur_page" afin d'appliquer le meme CSS pour obtenir une harmonie et cohérence hormis quelque exception défini dans le CDC (index.html par exemple) -->
+            <div class="conteneur_page">
+                <fieldset name="FormulaireContact" class="FormulaireContact">
+                    <div class="vide"></div>
+                    <h3>Choissisez le destinatire :</h3>
+                    <div class="contact-card">
+                        <label class="contact-option">
+                            <input type="radio" name="q1" class="wrong">DARCOS MArtin / Client du projet</label>
+                        <label class="contact-option">
+                            <input type="radio" name="q1" class="wrong">BOUAMAR Bilel / Chef de projet</label>
+                        <label class="contact-option">
+                            <input type="radio" name="q1" class="wrong">GALLET Killian / Relecture du projet n°1</label>
+                        <label class="contact-option">
+                            <input type="radio" name="q1" class="wrong">FITAMANT Antoine / Relecture du projet n°2</label>
+                    </div>
+                    <div class="vide"></div>
+                    <div class="contact_field">
+                        <label for="NomPrenom">Nom et prénom :</label>
+                        <input type="text" id="NomPrenom" name="fname" required>
+                        <div class="vide"></div>
+                        <label for="subject">Message :</label>
+                        <textarea id="subject" name="subject" required></textarea>
 
-    <label for="adresse email">Adresse e-mail :</label>
-    <br><input type="email" id="post" name="adresse_email" placeholder="prénom.nom@utt.fr" required>
-    <br><br>
+                    </div>
+                    <input type="submit" value="Confirmer">
+                </fieldset>
+                <div class="vide"></div>
+            </div>
 
-    <label for="pass">Mot de passe</label>
-    <br>
-    <input type="password" id="pass" name="pass" pattern="[A-Z]{1}[a-z]{1}[0-9]{2}" title="Au moins 3 caractère alphanumérique" required>
-    <br><br>
-
-    <label for="arrivee">Date d'arrivée :</label>
-    <br><input type="date" id="arrivee" name="arrivee">
-    <br><br>
-
-    <input type="submit" value="Confirmer">
-</fieldset>
+        </main>
+    <!-- Début du footer (pied de page) -->
+    <footer>
+            <p>2026 BOUAMAR Bilel - <a href="mailto:bilel.bouamar@utt.fr">bilel.bouamar@utt.fr</a> - Tous droits réservés</p>
+            <img src="../image/Logo/Fortnite_piedpage.jpg" alt="Logo de Fortnite" class="logo-footer">
+    </footer>
+    <script src="../javascript/fonction.js"></script>
 
  </body>
 
