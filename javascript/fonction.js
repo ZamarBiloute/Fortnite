@@ -179,3 +179,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 });
+
+// Gestion du menu Burger Mobile (Version FontAwesome)
+document.addEventListener('DOMContentLoaded', function () {
+    const burgerToggle = document.getElementById('burgerToggle');
+    const menuContainer = document.getElementById('myNav');
+
+    if (burgerToggle && menuContainer) {
+        burgerToggle.addEventListener('click', function (e) {
+            e.stopPropagation(); 
+            menuContainer.classList.toggle('open');
+        });
+
+        // Ferme le menu si on clique à côté
+        document.addEventListener('click', function (e) {
+            if (!menuContainer.contains(e.target)) {
+                menuContainer.classList.remove('open');
+            }
+        });
+    }
+});

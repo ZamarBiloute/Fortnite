@@ -30,7 +30,7 @@
   --color_texte : black;
   /* Couleur selection texte */
   --color_select_texte : #1cbf11;
-  
+
 
 }
 
@@ -52,6 +52,12 @@ header a{
   text-decoration: none;
   color: var(--color_texte);
 }
+
+/* Cache le bouton burger complet par défaut sur grand écran */
+.burger-icon {
+  display: none;
+}
+
 .bandeau{
   background-color: var(--color_background);
   display:flex;
@@ -146,4 +152,130 @@ footer p a{
   width: 115px;
   height: auto;
   margin-right: 10px;
+}
+
+/* @media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  ul.topnav.responsive li{}
+  
+  ul.topnav.responsive li:hover ul {
+    display:block;
+    width:100%;
+  }
+} */
+
+
+
+/* ============================================= 
+        ORDINATEUR (min-width : 1025px)
+ ============================================= */
+@media (min-width: 1025px) {
+  
+} 
+/* ============================================= 
+        ORDINATEUR (max-width : 1024px)
+ ============================================= */
+@media (max-width: 1024px) {
+   
+} 
+/* ============================================= 
+TABLETTE (max-width : 768px)
+============================================= */
+@media (max-width: 768px) {
+  
+} 
+
+/* ============================================= 
+        SMARTPHONE (max-width : 480px)
+ ============================================= */
+@media (max-width: 480px) {
+  .bandeau {
+    justify-content: space-between; /* Aligne le logo à gauche et le burger à droite */
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .menu {
+    margin-left: 0; /* Supprime le décalage PC */
+  }
+
+  /* Style du bouton burger avec l'icône FontAwesome */
+  .burger-icon {
+    display: block; /* Devient visible sur mobile */
+    background: none;
+    border: none;
+    color: var(--color_texte);
+    cursor: pointer;
+    padding: 10px;
+    font-size: 2.5rem; /* Ajuste la taille de l'icône fa-bars */
+    z-index: 1001;
+  }
+  
+  .burger-icon:hover {
+    color: var(--color_select_texte);
+  }
+
+  /* Force l'icône FontAwesome à bien s'afficher à l'intérieur */
+  .burger-icon i.fa.fa-bars {
+    display: inline-block; 
+  }
+
+  /* Masque la liste du menu par défaut sur mobile */
+  .menu .topnav {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* S'ouvre juste sous le bandeau */
+    left: 0;
+    width: 100%;
+    background-color: var(--color_background);
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  /* Classe activée par le JavaScript pour afficher le menu */
+  .menu.open .topnav {
+    display: flex;
+  }
+
+  /* Empilement vertical des rubriques */
+  .menu li {
+    float: none;
+    width: 100%;
+  }
+
+  .menu li a {
+    padding: 15px 30px;
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  /* Gestion des sous-menus sous forme de listes déroulantes propres */
+  .menu ul li ul {
+    position: relative;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: none;
+    padding: 0;
+    border: none;
+  }
+
+  .menu ul li:hover ul {
+    display: block;
+    margin-top: 0;
+    padding-left: 20px; /* Décale les sous-menus pour la lisibilité */
+  }
 }
