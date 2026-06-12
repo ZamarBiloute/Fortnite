@@ -36,6 +36,9 @@ html{
     scroll-behavior: smooth;
 }
 
+.fortnite-line{
+    height: 5px;
+}
 /* vidéo en fond */
 .videobk{
     position: absolute;
@@ -888,4 +891,37 @@ html{
 }
 .FormulaireContact input[type=submit]:hover {
     background-color: var(--color_button_actif);
+}
+
+/* ---------------------- */
+/* CSS de la page Crédit */
+/* ---------------------- */
+
+.photo_crédit{
+    display: flex;
+    flex-direction: column;
+}
+.photo_crédit h3{
+    text-align: center;
+    place-items: center;
+}
+.photo_crédit img{
+    border-radius: 150px;
+}
+.conteneur_crédit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+}    
+.conteneur_source h1{
+    text-align: center;
+    place-items: center;
+}
+.conteneur_source ul{
+    text-align: left;
+    margin-left: 50px;
+}
+.conteneur_source ul li{
+    margin-bottom: 0.2rem;
 }
