@@ -855,12 +855,12 @@ html{
     font-size: 1.2rem;
     
 }
-.FormulaireContact input#NomPrenom, textarea#subject{
+.FormulaireContact input#NomPrenom, textarea#subject,input#email {
     align-items: center;
     font-size: 1.2rem;
     font-family: var(--font);
 }
-.FormulaireContact input#NomPrenom {
+.FormulaireContact input#NomPrenom,input#email {
     width: 100%;
     height: 2rem;
  }
