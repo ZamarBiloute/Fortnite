@@ -837,14 +837,7 @@ html{
     margin-right: 10px;
 }
 
-/* Bloc contenant la liste des destinataire */
-.contact-card {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    
-}
+
 .contact_field{
     padding: 20px;
 }
@@ -874,13 +867,13 @@ html{
 
 .FormulaireContact textarea#subject {
     width: 100%;
-    height: 100px;
+    height: 350px;
     resize: none;
  }
 
  /* Mise en forme du bouton submit */
  .FormulaireContact input[type=submit] {
-  background-color: var(--color_button_inactif);
+  background-color: var(--color_background_main_page);
   color: white;
   padding: 12px 20px;
   margin-left: 20px;
@@ -888,6 +881,9 @@ html{
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+ .FormulaireContact .bouton{
+    place-self: center;
 }
 .FormulaireContact input[type=submit]:hover {
     background-color: var(--color_button_actif);

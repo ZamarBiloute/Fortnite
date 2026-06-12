@@ -69,29 +69,23 @@
             <div class="vide"></div>
             <!-- Toutes les pages ont une div "conteneur_page" afin d'appliquer le meme CSS pour obtenir une harmonie et cohérence hormis quelque exception défini dans le CDC (index.html par exemple) -->
             <div class="conteneur_page">
+                <form action="mailto:martin.darcos@utt.fr" method="post" enctype="text/plain">
                 <fieldset name="FormulaireContact" class="FormulaireContact">
-                    <div class="vide"></div>
-                    <h3>Choissisez le destinatire :</h3>
-                    <div class="contact-card">
-                        <label class="contact-option">
-                            <input type="radio" name="d1" class="wrong" checked>DARCOS Martin / Client du projet</label>
-                        <label class="contact-option">
-                            <input type="radio" name="d1" class="wrong">BOUAMAR Bilel / Chef de projet</label>
-                        <label class="contact-option">
-                            <input type="radio" name="d1" class="wrong">GALLET Killian / Relecture du projet n°1</label>
-                        <label class="contact-option">
-                            <input type="radio" name="d1" class="wrong">FITAMANT Antoine / Relecture du projet n°2</label>
-                    </div>
                     <div class="contact_field">
                         <label for="NomPrenom">Nom et prénom :</label>
                         <input type="text" id="NomPrenom" name="fname" required>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
                         <div class="vide"></div>
                         <label for="subject">Message :</label>
-                        <textarea id="subject" name="subject" required></textarea>
+                        <textarea for="comment" id="subject" name="subject" required></textarea>
 
                     </div>
-                    <input type="submit" value="Confirmer">
+                    <div class="bouton">
+                        <input type="submit" value="ENVOYER">
+                    </div>
                 </fieldset>
+                </form>
                 <div class="vide"></div>
             </div>
 
