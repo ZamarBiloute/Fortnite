@@ -10,50 +10,56 @@
     <link rel="icon" type="image/png" href="../image/icone/favicon.png">
     <link rel="stylesheet" href="../style/Style_Header_Et_Footer.css">    
     <link rel="stylesheet" href="../style/Style_content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body >
         <!-- Début du header dans lequel se trouve le bandeau de menu -->
-        <header>
-            <div class="bandeau">
-                <div class="logo">
-                    <a href="../index.html" class ="logo-link">
-                        <img src="../image/Logo/logo.png" alt="Logo de Fortnite" class="logo">
-                    </a>
-                </div>
-                <!-- Chaque texte du bandeau de menu sera en couleur afin de signaler à l'utilisateur la rubrique de la page en cours -->
-                <nav class = "menu">
-                            <ul class = "topnav">
-                                <li class="barre"><a href="#Presentation">Présentation</a>
-                                    <ul>
-                                        <li><a href="hist.html">Histoire du jeu</a></li>
-                                        <li><a href="hist_studio.html">Histoire du studio</a></li>
-                                        <li><a href="gameplay.html">Gameplay</a></li>
-                                    </ul>
-                                </li>
-                                <li class="barre"><a href="#Impact" style="color:#1cbf11">Impacts</a>
-                                    <ul>
-                                        <li><a href="effet.html">Les effets</a></li>
-                                        <li><a href="esport.html">Esport</a></li>
-                                        <li><a href="collab.html">Collaborations</a></li>
-                                    </ul>
-                                </li>
-                                <li class="barre"><a href="#Média">Média</a>
-                                    <ul>
-                                        <li><a href="photo.html">Photos</a></li>
-                                        <li><a href="video.html">Vidéos</a></li>
-                                    </ul>
-                                </li>
-                                <li class="barre"><a href="quiz.html">Quiz</a></li>
-                                <li class="barre"><a href="#Contact">Contact</a>
-                                    <ul>
-                                        <li><a href="formulaire.html">Formulaire</a></li>
-                                        <li><a href="credit.html">Crédits</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                </nav>
+    <header>
+        <div class="bandeau">               
+            <div class="logo">
+                <a href="../index.html" class ="logo-link">
+                    <img src="../image/Logo/logo.png" alt="Logo de Fortnite" class="logo">
+                </a>
             </div>
-        </header> 
+            <!-- Début de la définition du menu de type "nav" -->
+            <!-- Chaque texte du bandeau de menu sera en couleur afin de signaler à l'utilisateur la rubrique de la page en cours -->
+            <nav class="menu" id="myNav"> 
+                <button class="burger-icon" id="burgerToggle" aria-label="Ouvrir le menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <ul class="topnav" id="myTopnav">
+                    <li class="barre"><a href="#Presentation">Présentation</a>
+                        <ul>
+                            <li><a href="hist.html">Histoire du jeu</a></li>
+                            <li><a href="hist_studio.html">Histoire du studio</a></li>
+                            <li><a href="gameplay.html">Gameplay</a></li>
+                        </ul>
+                    </li>
+                    <li class="barre"><a href="#Impact" style="color: #1cbf11">Impacts</a>
+                        <ul>
+                            <li><a href="effet.html">Les effets</a></li>
+                            <li><a href="esport.html">Esport</a></li>
+                            <li><a href="collab.html">Collaborations</a></li>
+                        </ul>
+                    </li>
+                    <li class="barre"><a href="#Média">Média</a>
+                        <ul>
+                            <li><a href="photo.html">Photos</a></li>
+                            <li><a href="video.html">Vidéos</a></li>
+                        </ul>
+                    </li>
+                    <li class="barre"><a href="quiz.html">Quiz</a></li>
+                    <li class="barre"><a href="#Contact">Contact</a>
+                        <ul>
+                            <li><a href="formulaire.html">Formulaire</a></li>
+                            <li><a href="credit.html">Crédits</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>               
+        </div>
+    </header>
         <!-- Toutes les pages ont une 'div' appelé  "main_page" afin d'appliquer le meme CSS pour obtenir une harmonie et cohérence hormis quelque exception défini dans le CDC (index.html par exemple)-->
         <main class="main_page"> 
             <div class="vide"></div>
@@ -127,6 +133,7 @@
                 <p>2026 BOUAMAR Bilel - <a href="mailto:bilel.bouamar@utt.fr">bilel.bouamar@utt.fr</a> - Tous droits réservés</p>
                 <img src="../image/Logo/Fortnite_piedpage.jpg" alt="Logo de Fortnite" class="logo-footer">
         </footer>
+        <script src="../javascript/fonction.js"></script>
 </body>
 
 </html>
