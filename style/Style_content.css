@@ -836,8 +836,7 @@ html{
 
 /* Bloc contenant la liste des destinataire */
 .contact-card {
-    margin-bottom: 20px;
-    padding: 20px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
