@@ -72,7 +72,7 @@ header a{
   width: 90px;
   height: auto;
   /* margin-right: 100px; */
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-top: 10px;
 }
 
@@ -200,7 +200,29 @@ footer p a{
 TABLETTE (max-width : 768px)
 ============================================= */
 @media (max-width: 768px) {
-  
+  .bandeau .logo img{
+    width: 50px;
+  }
+  .bandeau {
+    height: 60px;
+  }
+
+  .menu{
+    margin-left: 1rem;
+  }
+  .menu ul{
+    width: calc(768px - 150px);
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .menu li a {
+    padding: 0px;
+    font-size: 1.8rem;
+  }
+  .menu li ul{
+    width: auto;
+  }
 } 
 
 /* ============================================= 
@@ -261,6 +283,7 @@ TABLETTE (max-width : 768px)
     float: none;
     width: 100%;
   }
+  
   .bandeau .logo img{
     width: 70px;
   }
