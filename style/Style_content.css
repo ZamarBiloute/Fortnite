@@ -926,18 +926,19 @@ html{
         SMARTPHONE (max-width : 480px)
  ============================================= */
 @media (max-width: 480px) {
-    p, p.quiz-question, label, label.quiz-option,.FormulaireContact label, p.score-display,.score-display::after,{
+    p, p.quiz-question, label, label.quiz-option,.FormulaireContact label, p.score-display,.score-display::after{
         font-size: 0.8rem;
     }
     h1, h1.quiz-title {
         font-size: 1.2rem;
     }
-    h2, .quiz-result-box h2 {
+    h2, .quiz-result-box h2,.side-menu a {
         font-size: 1.1rem;
     }
     em{
         font-size: 0.7rem;
     }
+    
     .content img{
         width: 50%;
     }
@@ -997,6 +998,9 @@ html{
     }
     .photo_crédit{
         align-items: center;
+    }
+    .side-menu {
+        min-width: 200px;
     }
 
 }
