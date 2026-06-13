@@ -921,12 +921,127 @@ html{
 .conteneur_source ul li{
     margin-bottom: 0.2rem;
 }
+/* ============================================= 
+TABLETTE (max-width : 1024px)
+============================================= */
+@media (max-width: 1024px) {
+    p,
+    .contenue p,
+    .content p,
+    p.quiz-question, 
+    label, 
+    label.quiz-option,
+    .FormulaireContact label, 
+    p.score-display,
+    .score-display::after{
+        font-size: 1rem;
+    }
+    h1, h1.quiz-title {
+        font-size: 1.5rem;
+    }
+    h2, .quiz-result-box h2,.side-menu a {
+        font-size: 1.2rem;
+    }
+    em{
+        font-size: 0.7rem;
+    }
+    
+    .content img{
+        width: 30%;
+    }
+    .content {
+        margin: 10px;
+    }
+    .flip-card{
+        width: 350px;
+    }
+    .container_timeline.left .flip-card{
+        right: -70px;
+    }
+    /* .right{
+        left:0px
+    }
+    .container_timeline::after{
+        left : -15px
+    }
+    .left::before {
+        left : 30px;
+        rotate: 180deg;
+    } */
+    /* .content_timeline{
+        width: 300px;
+    }
+    .flip-card-back img{
+        width: 300px;
+    }
+    .timeline::after{
+        left:0px
+    }
+    .contenue {
+        flex-direction: column;
+    } */
+    .menu_filter, .filtercard {
+        flex-direction: column;
+    }
+    .filtercard .card{
+        margin: 5px
+    }
+    .flip-card-back {
+        left:60px
+    }
+    .expand-container img:hover {
+        flex:15;
+    }
+    .expand-container img {
+        flex:2;
+        padding: 1px;
+    }
+    .contenue_effet_esport_evenement .evenement img {
+        width: 300px;
+    }
+    .contenue_effet_esport_joueur .joueur {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .graphique{
+        align-items: center;
+    }
+    .contenue_effet_esport_joueur .joueur img{
+        width: 350px;
+    }
+    .photo_crédit img{
+        width: 100px;
+    }
+    .conteneur_crédit{
+        flex-direction: row;
+        align-items: center;
+    }
+    .photo_crédit{
+        align-items: center;
+    }
+    .side-menu {
+        min-width: 200px;
+    }
+
+
+}
+
 
 /* ============================================= 
 TABLETTE (max-width : 768px)
 ============================================= */
 @media (max-width: 768px) {
-    p,.content p, p.quiz-question, label, label.quiz-option,.FormulaireContact label, p.score-display,.score-display::after{
+    p,
+    .contenue p,
+    .content p,
+    p.quiz-question, 
+    label, 
+    label.quiz-option,
+    .FormulaireContact label, 
+    p.score-display,
+    .score-display::after{
         font-size: 1rem;
     }
     h1, h1.quiz-title {
@@ -984,10 +1099,16 @@ TABLETTE (max-width : 768px)
         padding: 1px;
     }
     .contenue_effet_esport_evenement .evenement img {
-        width: 136px;
+        width: 300px;
     }
     .contenue_effet_esport_joueur .joueur {
         flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .graphique{
+        align-items: center;
     }
     .contenue_effet_esport_joueur .joueur img{
         width: 350px;
@@ -996,7 +1117,7 @@ TABLETTE (max-width : 768px)
         width: 100px;
     }
     .conteneur_crédit{
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
     .photo_crédit{
@@ -1080,8 +1201,11 @@ TABLETTE (max-width : 768px)
         flex:2;
         padding: 1px;
     }
+    .contenue_effet_esport_evenement .evenement{
+        flex-direction: column;
+    }
     .contenue_effet_esport_evenement .evenement img {
-        width: 136px;
+        width: 200px;
     }
     .contenue_effet_esport_joueur .joueur {
         flex-direction: column;

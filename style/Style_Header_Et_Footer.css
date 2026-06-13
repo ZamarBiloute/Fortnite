@@ -194,7 +194,28 @@ footer p a{
         ORDINATEUR (max-width : 1024px)
  ============================================= */
 @media (max-width: 1024px) {
-   
+  .bandeau .logo img{
+    width: 90px;
+  }
+  .bandeau {
+    height: 120px;
+  }
+  .menu{
+    margin-left: 0rem;
+  }
+  .menu ul{
+    width: calc(1024px - 150px);
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .menu li a {
+    padding: 0px;
+    font-size: 2rem;
+  }
+  .menu li ul{
+    width: auto;
+  }
 } 
 /* ============================================= 
 TABLETTE (max-width : 768px)
