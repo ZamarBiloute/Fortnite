@@ -30,8 +30,13 @@
   --color_texte : black;
   /* Couleur selection texte */
   --color_select_texte : #1cbf11;
+  
+  --web-version: "v1.0.0";
 
-
+}
+/* Utilisation pour afficher la version dans le CSS (via un pseudo-élément) */
+.version-display::after {
+    content: var(--web-version);
 }
 
 *{
