@@ -926,12 +926,12 @@ html{
 GRAND ECRAN (min-width : 1025px)
 ============================================= */
 @media (min-width: 1025px) {
-    main{
+    main, footer{
         max-width: 1200px;
         margin: 0 auto;
 
     }
-    header {
+    header, footer {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
