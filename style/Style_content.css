@@ -936,7 +936,7 @@ GRAND ECRAN (min-width : 1025px)
         margin-left: auto;
         margin-right: auto;
     }
-
+}
 /* ============================================= 
 ORDINATEUR (max-width : 1024px)
 ============================================= */
@@ -976,7 +976,7 @@ ORDINATEUR (max-width : 1024px)
     }
     
     .menu_filter, .filtercard {
-        flex-direction: column;
+        flex-direction: row;
     }
     .filtercard .card{
         margin: 5px
@@ -1037,7 +1037,7 @@ TABLETTE (max-width : 768px)
     .FormulaireContact label, 
     p.score-display,
     .score-display::after{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     h1, h1.quiz-title {
         font-size: 1.2rem;
