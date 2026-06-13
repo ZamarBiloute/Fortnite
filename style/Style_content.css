@@ -968,21 +968,26 @@ ORDINATEUR (max-width : 1024px)
     .content {
         margin: 10px;
     }
+    .timeline{
+        width: auto;
+    }
     .flip-card{
         width: 350px;
     }
-    .container_timeline.left .flip-card{
-        right: -70px;
-    }
-    
+    .left::before{
+        right: 20px;
+    }    
     .menu_filter, .filtercard {
         flex-direction: row;
     }
     .filtercard .card{
         margin: 5px
     }
-    .flip-card-back {
-        left:60px
+    .flip-card-front .flip-card-back {
+        width: auto;
+    }
+    .flip-card-back img{
+        width: 350px;
     }
     .expand-container img:hover {
         flex:15;
@@ -1084,7 +1089,7 @@ TABLETTE (max-width : 768px)
         margin: 5px
     }
     .flip-card-back {
-        left:60px
+        left:24px
     }
     .expand-container img:hover {
         flex:15;
@@ -1172,7 +1177,7 @@ TABLETTE (max-width : 768px)
         width: 300px;
     }
     .flip-card-back {
-        left:120px
+        left:25px
     }
     .flip-card-back img{
         width: 300px;

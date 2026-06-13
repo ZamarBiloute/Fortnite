@@ -31,7 +31,7 @@
   /* Couleur selection texte */
   --color_select_texte : #1cbf11;
   
-  --web-version: "v1.0.3";
+  --web-version: "v1.0.4";
 
 }
 /* Utilisation pour afficher la version dans le CSS (via un pseudo-élément) */
