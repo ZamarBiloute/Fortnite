@@ -973,6 +973,9 @@ TABLETTE (max-width : 768px)
     .filtercard .card{
         margin: 5px
     }
+    .flip-card-back {
+        left:60px
+    }
     .expand-container img:hover {
         flex:15;
     }
@@ -1051,6 +1054,9 @@ TABLETTE (max-width : 768px)
     }
     .content_timeline{
         width: 300px;
+    }
+    .flip-card-back {
+        left:120px
     }
     .flip-card-back img{
         width: 300px;

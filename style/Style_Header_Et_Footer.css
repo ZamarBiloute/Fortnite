@@ -31,7 +31,7 @@
   /* Couleur selection texte */
   --color_select_texte : #1cbf11;
   
-  --web-version: "v1.0.0";
+  --web-version: "v1.0.1";
 
 }
 /* Utilisation pour afficher la version dans le CSS (via un pseudo-élément) */
@@ -283,7 +283,7 @@ TABLETTE (max-width : 768px)
     float: none;
     width: 100%;
   }
-  
+
   .bandeau .logo img{
     width: 70px;
   }
