@@ -188,7 +188,10 @@ footer p a{
         ORDINATEUR (min-width : 1025px)
  ============================================= */
 @media (min-width: 1025px) {
-  
+  .menu{
+    margin-left: 0rem;
+  }
+
 } 
 /* ============================================= 
         ORDINATEUR (max-width : 1024px)

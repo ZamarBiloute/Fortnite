@@ -921,8 +921,24 @@ html{
 .conteneur_source ul li{
     margin-bottom: 0.2rem;
 }
+
 /* ============================================= 
-TABLETTE (max-width : 1024px)
+GRAND ECRAN (min-width : 1025px)
+============================================= */
+@media (min-width: 1025px) {
+    main{
+        max-width: 1200px;
+        margin: 0 auto;
+
+    }
+    header {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* ============================================= 
+ORDINATEUR (max-width : 1024px)
 ============================================= */
 @media (max-width: 1024px) {
     p,
@@ -958,28 +974,7 @@ TABLETTE (max-width : 1024px)
     .container_timeline.left .flip-card{
         right: -70px;
     }
-    /* .right{
-        left:0px
-    }
-    .container_timeline::after{
-        left : -15px
-    }
-    .left::before {
-        left : 30px;
-        rotate: 180deg;
-    } */
-    /* .content_timeline{
-        width: 300px;
-    }
-    .flip-card-back img{
-        width: 300px;
-    }
-    .timeline::after{
-        left:0px
-    }
-    .contenue {
-        flex-direction: column;
-    } */
+    
     .menu_filter, .filtercard {
         flex-direction: column;
     }
