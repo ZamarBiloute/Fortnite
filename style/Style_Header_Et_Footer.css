@@ -256,6 +256,12 @@ TABLETTE (max-width : 768px)
     float: none;
     width: 100%;
   }
+  .bandeau .logo img{
+    width: 70px;
+  }
+  .bandeau {
+    height: 80px;
+  }
 
   .menu li a {
     padding: 15px 30px;
