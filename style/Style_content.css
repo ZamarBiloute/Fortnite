@@ -1174,7 +1174,7 @@ TABLETTE (max-width : 768px)
         rotate: 180deg;
     }
     .content_timeline{
-        width: 300px;
+        width: 100%;
     }
     .flip-card-back {
         left:25px

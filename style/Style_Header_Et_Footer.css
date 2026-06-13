@@ -207,7 +207,7 @@ footer p a{
     margin-left: 0rem;
   }
   .menu ul{
-    width: calc(1024px - 150px);
+    width: 100%; /* CHANGÉ : Évite que le menu dépasse de l'écran en forçant 1024px */
     display: flex;
     justify-content: space-between;
 
@@ -235,7 +235,7 @@ TABLETTE (max-width : 768px)
     margin-left: 1rem;
   }
   .menu ul{
-    width: calc(768px - 150px);
+    width: 100%; /* CHANGÉ : Évite que le menu dépasse en forçant 768px */
     display: flex;
     justify-content: space-between;
 
