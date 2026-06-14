@@ -31,7 +31,7 @@
   /* Couleur selection texte */
   --color_select_texte : #1cbf11;
   
-  --web-version: "v1.0.5";
+  --web-version: "v1.0.6";
 
 }
 /* Utilisation pour afficher la version dans le CSS (via un pseudo-élément) */
@@ -250,9 +250,9 @@ TABLETTE (max-width : 768px)
 } 
 
 /* ============================================= 
-        SMARTPHONE (max-width : 480px)
+        SMARTPHONE (max-width : 425px)
  ============================================= */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .bandeau {
     justify-content: space-between; /* Aligne le logo à gauche et le burger à droite */
     padding: 10px 20px;

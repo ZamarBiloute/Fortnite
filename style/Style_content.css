@@ -125,8 +125,8 @@ html{
     border-radius: 40px;
     /* place-self: center; */
     border: 1px solid black;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    margin-left: 49px;
+    margin-right: 49px;
     border-color: transparent;
     border-left-width: 50px;
     border-right-width: 50px;
@@ -936,6 +936,34 @@ GRAND ECRAN (min-width : 1025px)
         margin-left: auto;
         margin-right: auto;
     }
+    button#sideMenuToggle {
+        /* On le place au centre horizontal de l'écran */
+        left: 50%;
+        /* On annule le 'right' hérité du CSS par défaut */
+        right: auto; 
+        /* On le décale vers la droite de 600px (la moitié de 1200px).
+           Vous pouvez soustraire sa propre largeur (ex: - 44px) ou l'ajuster 
+           selon vos préférences visuelles (ex: 560px pour qu'il soit juste à l'intérieur).
+        */
+        transform: translateY(-50%) translateX(560px); 
+    }
+    /* Si le chevron tourne lorsqu'il est ouvert (classe .rotated) */
+    button#sideMenuToggle.rotated {
+        transform: translateY(-50%) translateX(560px) rotate(180deg);
+    }
+    /* Pour que le menu ouvert reste lui aussi aligné près du chevron */
+    .side-menu {
+        left: 50%;
+        right: auto;
+        /* Aligné juste à côté du contenu max-width */
+        transform: translateY(-50%) translateX(180px); 
+        opacity: 0;
+    }
+    
+    .side-menu.open {
+        transform: translateY(-50%) translateX(180px);
+        opacity: 1;
+    }
 }
 /* ============================================= 
 ORDINATEUR (max-width : 1024px)
@@ -1126,14 +1154,18 @@ TABLETTE (max-width : 768px)
     .side-menu {
         min-width: 200px;
     }
+    .conteneur_page{
+        margin-left: 31px;
+        margin-right: 31px;
+    }
 
 
 }
 
 /* ============================================= 
-        SMARTPHONE (max-width : 480px)
+        SMARTPHONE (max-width : 425px)
  ============================================= */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
     p, p.quiz-question, label, label.quiz-option,.FormulaireContact label, p.score-display,.score-display::after,.contenue p{
         font-size: 0.8rem;
     }
@@ -1176,11 +1208,15 @@ TABLETTE (max-width : 768px)
     .content_timeline{
         width: 300px;
     }
+    .flip-card{
+        width: 250px;
+    }
     .flip-card-back {
         left:25px
     }
     .flip-card-back img{
-        width: 300px;
+        width: 250px;
+        transform: translateX(25px);
     }
     .timeline::after{
         left:0px
@@ -1226,6 +1262,11 @@ TABLETTE (max-width : 768px)
     .side-menu {
         min-width: 200px;
     }
+    .conteneur_page{
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
 
 
 }
